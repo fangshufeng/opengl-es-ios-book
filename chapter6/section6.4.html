@@ -1,0 +1,1352 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.4、动画化纹理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter7/" />
+    
+    
+    <link rel="prev" href="section6.3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第一章 使用现代移动图形硬件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/section1.1.html">
+            
+                <a href="../chapter1/section1.1.html">
+            
+                    
+                    1.1、3D渲染 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/section1.2.html">
+            
+                <a href="../chapter1/section1.2.html">
+            
+                    
+                    1.2 、为图形处理器提供数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../chapter1/section1.2/section1.2.1.html">
+            
+                <a href="../chapter1/section1.2/section1.2.1.html">
+            
+                    
+                    1.2.1、缓存：提供数据的最好方式 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../chapter1/section1.2/section1.2.2.html">
+            
+                <a href="../chapter1/section1.2/section1.2.2.html">
+            
+                    
+                    1.2.2、帧缓存 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/section1.3.html">
+            
+                <a href="../chapter1/section1.3.html">
+            
+                    
+                    1.3、OpenGL ES的上下文 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/section1.4/">
+            
+                <a href="../chapter1/section1.4/">
+            
+                    
+                    1.4、一个3D场景的几何数据  
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../chapter1/section1.4/section1.4.1.html">
+            
+                <a href="../chapter1/section1.4/section1.4.1.html">
+            
+                    
+                    1.4.1、坐标系 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../chapter1/section1.4/section1.4.2.html">
+            
+                <a href="../chapter1/section1.4/section1.4.2.html">
+            
+                    
+                    1.4.2 、矢量 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../chapter1/section1.4/section1.4.3.html">
+            
+                <a href="../chapter1/section1.4/section1.4.3.html">
+            
+                    
+                    1.4.3 、点、线、三角形 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter1/section1.5.html">
+            
+                <a href="../chapter1/section1.5.html">
+            
+                    
+                    1.5、小结 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第2章 让硬件为你工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/section2.1.html">
+            
+                <a href="../chapter2/section2.1.html">
+            
+                    
+                    2.1 、使用OpenGL ES绘制一个Core Animation层 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/section2.2.html">
+            
+                <a href="../chapter2/section2.2.html">
+            
+                    
+                    2.2、结合Cocoa Touch和OpenGL ES 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/section2.3.html">
+            
+                <a href="../chapter2/section2.3.html">
+            
+                    
+                    2.3、OpenGLES_Ch2_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/section2.4.html">
+            
+                <a href="../chapter2/section2.4.html">
+            
+                    
+                    2.4、深入探讨GLKView是怎么工作的 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/section2.5.html">
+            
+                <a href="../chapter2/section2.5.html">
+            
+                    
+                    2.5、对于GLKit的推断 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第3章 纹理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section3.1.html">
+            
+                <a href="../chapter3/section3.1.html">
+            
+                    
+                    3.1、什么是纹理 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section3.2.html">
+            
+                <a href="../chapter3/section3.2.html">
+            
+                    
+                    3.2、OpenGLES_Ch3_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/section3.3.html">
+            
+                <a href="../chapter3/section3.3.html">
+            
+                    
+                    3.3、深入探讨GLKTextureLoader是怎么工作的 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/section3.4.html">
+            
+                <a href="../chapter3/section3.4.html">
+            
+                    
+                    3.4、OpenGLES_Ch3_3示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/section3.5.html">
+            
+                <a href="../chapter3/section3.5.html">
+            
+                    
+                    3.5、透明度、混合和多重纹理 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/section3.6.html">
+            
+                <a href="../chapter3/section3.6.html">
+            
+                    
+                    3.6、纹理压缩 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第4章 散发一些光线 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/section4.1.html">
+            
+                <a href="../chapter4/section4.1.html">
+            
+                    
+                    4.1、环境光、漫反射光、镜面反射光 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/section4.2.html">
+            
+                <a href="../chapter4/section4.2.html">
+            
+                    
+                    4.2、计算有多少光线照向每个三角形 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/section4.3.html">
+            
+                <a href="../chapter4/section4.3.html">
+            
+                    
+                    4.3、使用GLKit灯光 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/section4.4.html">
+            
+                <a href="../chapter4/section4.4.html">
+            
+                    
+                    4.4、OpenGLES_Ch4_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/section4.5.html">
+            
+                <a href="../chapter4/section4.5.html">
+            
+                    
+                    4.5、把灯光烘焙进纹理中 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/section4.6.html">
+            
+                <a href="../chapter4/section4.6.html">
+            
+                    
+                    4.6、片元计算 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    第5章 改变你的视点 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/section5.1.html">
+            
+                <a href="../chapter5/section5.1.html">
+            
+                    
+                    5.1、深度渲染缓存（Depth Render Buffer）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/section5.2.html">
+            
+                <a href="../chapter5/section5.2.html">
+            
+                    
+                    5.2、例子OpenGLES_Ch5_1和例子OpenGLES_Ch5_2 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/section5.3.html">
+            
+                <a href="../chapter5/section5.3.html">
+            
+                    
+                    5.3、深入探讨不用GLKit添加深度缓存 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/section5.4.html">
+            
+                <a href="../chapter5/section5.4.html">
+            
+                    
+                    5.4、变换 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/section5.5.html">
+            
+                <a href="../chapter5/section5.5.html">
+            
+                    
+                    5.5、复合变换手册 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/section5.6.html">
+            
+                <a href="../chapter5/section5.6.html">
+            
+                    
+                    5.6、透视和平截头体 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第6章 动画 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="section6.1.html">
+            
+                <a href="section6.1.html">
+            
+                    
+                    6.1、场景内移动：例子OpenGLES_Ch6_1 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="section6.2.html">
+            
+                <a href="section6.2.html">
+            
+                    
+                    6.2、动画化顶点数据 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="section6.3.html">
+            
+                <a href="section6.3.html">
+            
+                    
+                    6.3、动画化颜色和灯光：例子OpenGLES_Ch6_3 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="section6.4.html">
+            
+                <a href="section6.4.html">
+            
+                    
+                    6.4、动画化纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    第7章 加载和使用模型 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/section7.1.html">
+            
+                <a href="../chapter7/section7.1.html">
+            
+                    
+                    7.1、建模工具和格式 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/section7.2.html">
+            
+                <a href="../chapter7/section7.2.html">
+            
+                    
+                    7.2、读取modelplist文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/section7.3.html">
+            
+                <a href="../chapter7/section7.3.html">
+            
+                    
+                    7.3、OpenGLES_Ch7_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter7/section7.4.html">
+            
+                <a href="../chapter7/section7.4.html">
+            
+                    
+                    7.4、高级模型 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    第8章 特效 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/section8.1.html">
+            
+                <a href="../chapter8/section8.1.html">
+            
+                    
+                    8.1、天空盒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/section8.2.html">
+            
+                <a href="../chapter8/section8.2.html">
+            
+                    
+                    8.2、深入探讨GLKSkyboxEffect是怎么工作的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/section8.3.html">
+            
+                <a href="../chapter8/section8.3.html">
+            
+                    
+                    8.3、粒子 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/section8.4.html">
+            
+                <a href="../chapter8/section8.4.html">
+            
+                    
+                    8.4、公告牌 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    第9章 优化 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/section9.1.html">
+            
+                <a href="../chapter9/section9.1.html">
+            
+                    
+                    9.1、尽可能减少渲染 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter9/section9.2.html">
+            
+                <a href="../chapter9/section9.2.html">
+            
+                    
+                    9.2、不要猜：解析（Profile） 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter9/section9.3.html">
+            
+                <a href="../chapter9/section9.3.html">
+            
+                    
+                    9.3、尽量减少缓存复制 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../chapter9/section9.4.html">
+            
+                <a href="../chapter9/section9.4.html">
+            
+                    
+                    9.4、尽量减少状态变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    第10章 地形和拾取 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter10/section10.1.html">
+            
+                <a href="../chapter10/section10.1.html">
+            
+                    
+                    10.1、地形的实现 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter10/section10.2.html">
+            
+                <a href="../chapter10/section10.2.html">
+            
+                    
+                    10.2、添加模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter10/section10.3.html">
+            
+                <a href="../chapter10/section10.3.html">
+            
+                    
+                    10.3、OpenGL ES摄像机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter10/section10.4.html">
+            
+                <a href="../chapter10/section10.4.html">
+            
+                    
+                    10.4、拾取 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../chapter10/section10.5.html">
+            
+                <a href="../chapter10/section10.5.html">
+            
+                    
+                    10.5、优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter11/">
+            
+                <a href="../chapter11/">
+            
+                    
+                    第11章 数学速查 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chapter11/section11.1.html">
+            
+                <a href="../chapter11/section11.1.html">
+            
+                    
+                    11.1、概述 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chapter11/section11.2.html">
+            
+                <a href="../chapter11/section11.2.html">
+            
+                    
+                    11.2、解码矩阵 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../chapter11/section11.3.html">
+            
+                <a href="../chapter11/section11.3.html">
+            
+                    
+                    11.3、四元法 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../chapter11/section11.4.html">
+            
+                <a href="../chapter11/section11.4.html">
+            
+                    
+                    11.4、常用的图形数学 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chapter12/">
+            
+                <a href="../chapter12/">
+            
+                    
+                    第12章 理清整体思路
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chapter12/section12.1.html">
+            
+                <a href="../chapter12/section12.1.html">
+            
+                    
+                    12.1、概述 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../chapter12/section12.2.html">
+            
+                <a href="../chapter12/section12.2.html">
+            
+                    
+                    12.2、一切如故 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../chapter12/section12.3.html">
+            
+                <a href="../chapter12/section12.3.html">
+            
+                    
+                    12.3、设备动作 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.4、动画化纹理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="64&#x3001;&#x52A8;&#x753B;&#x5316;&#x7EB9;&#x7406;">6.4&#x3001;&#x52A8;&#x753B;&#x5316;&#x7EB9;&#x7406;</h1>
+<p>&#x968F;&#x7740;&#x65F6;&#x95F4;&#x53D8;&#x6362;model-view&#x5750;&#x6807;&#x7CFB;&#x4F1A;&#x8BA9;&#x6E32;&#x67D3;&#x5BF9;&#x8C61;&#x770B;&#x8D77;&#x6765;&#x50CF;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;&#x89C6;&#x70B9;&#x79FB;&#x52A8;&#xFF0C;&#x53CD;&#x4E4B;&#x4EA6;&#x7136;&#x3002;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x6539;&#x53D8;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x7CFB;&#x53EF;&#x4EE5;&#x52A8;&#x753B;&#x5316;&#x51E0;&#x4F55;&#x4F53;&#x7684;&#x7EB9;&#x7406;&#x6620;&#x5C04;&#x8FC7;&#x7A0B;&#x3002;&#x793A;&#x4F8B;OpenGLES_Ch6_4&#x4F1A;&#x52A0;&#x8F7D;&#x5E76;
+&#x6620;&#x5C04;&#x4E00;&#x4E2A;&#x534A;&#x900F;&#x660E;&#x7EB9;&#x7406;&#x5230;&#x4F8B;&#x5B50;OpenGLES_Ch6_3&#x7684;&#x98D8;&#x626C;&#x65D7;&#x5E1C;&#x4E0A;&#x3002;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4F1A;&#x57FA;&#x4E8E;&#x901D;&#x53BB;&#x7684;&#x65F6;&#x95F4;&#x65CB;&#x8F6C;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x7CFB;&#x6765;&#x4EA7;&#x751F;&#x56FE;6-8&#x4E2D;&#x7684;&#x5C4F;&#x5E55;&#x622A;&#x56FE;&#x3002;</p>
+<div align="center">
+<img src="https://github.com/fangshufeng/gitments/blob/master/OpenGLES/chapter6/15626660254593.jpg?raw=true" width="400" height="300">
+<div>&#x56FE;&#x3000;6-8</div>
+</div> 
+
+
+<h2 id="641-openglesch64&#x793A;&#x4F8B;">6.4.1 OpenGLES_Ch6_4&#x793A;&#x4F8B;</h2>
+<p>OpenGLES_Ch6_4ViewController &#x7684;&#x201C;-view-
+DidLoad&#x201D;&#x65B9;&#x6CD5;&#x4F1A;&#x5229;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x52A0;&#x8F7D;&#x5E76;&#x914D;&#x7F6E;&#x51E0;&#x4E4E;&#x4E0E;&#x4F8B;&#x5B50;OpenGLES_Ch3_1&#x4E2D;&#x7684;&#x7EB9;&#x7406;&#x76F8;&#x540C;&#x7684;&#x7EB9;&#x7406;&#x3002;</p>
+<pre><code class="lang-c">
+CGImageRef imageRef0 = [(UIImage imageNamed:@<span class="hljs-string">&quot;RadiusSelectionTool. png&quot;</span> ] CGImage];
+GLKTextureInfo *textureInfo0 = [GLKTextureLoader textureWithCGImage: imageRef0 options:nil error:<span class="hljs-literal">NULL</span>];
+self.baseEffect.texture2d0.name = textureInfo0.name;
+self.baseEffect.texture2d0.target = textureInfo0.target;
+</code></pre>
+<p>&#x6DFB;&#x52A0;&#x5230;OpenGLES_Ch6_4ViewController &#x7684;&#x65B0;&#x65B9;&#x6CD5;&#x201C;-update TextureTransform&#x201D;&#x4F1A;&#x65CB;&#x8F6C;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x7CFB;&#x3002;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x7B2C;3&#x7AE0;&#xFF0C;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x7CFB;&#x4F1A;&#x5206;&#x522B;&#x6CBF;&#x7740;S&#x8F74;&#x548C;T&#x8F74;&#x4ECE;0.0&#x8DE8;&#x5EA6;&#x5230;1.0&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x56F4;&#x7ED5;&#x7EB9;&#x7406;&#x7684;&#x4E2D;&#x5FC3;&#x65CB;&#x8F6C;&#xFF0C;&#x5177;&#x4F53;&#x8FC7;&#x7A0B;&#x662F;&#x5148;&#x5E73;&#x79FB;&#x5230;{0.5, 0.5}, &#x7136;&#x540E;&#x65CB;&#x8F6C;,&#x6700;&#x540E;&#x518D;&#x5E73;&#x79FB;&#x56DE;{ -0.5, -0.5}&#x3002;&#x7B2C;5&#x7AE0;&#x5DF2;&#x7ECF;&#x8BB2;&#x5230;&#x8FC7;&#x7EB9;&#x7406;&#x77E9;&#x9635;&#x4EE5;&#x53CA;&#x56F4;&#x7ED5;&#x4E00;&#x4E2A;&#x70B9;&#x65CB;&#x8F6C;&#x7684;&#x6280;&#x5DE7;&#x3002;</p>
+<pre><code class="lang-c">
+- (<span class="hljs-keyword">void</span>)updateTextureTransform {
+
+    self.baseEffect.textureMatrix2d0 = GLKMatrix4MakeTranslation( <span class="hljs-number">0.5</span>,<span class="hljs-number">0.5</span>,<span class="hljs-number">0.0</span>);
+
+    self.baseEffect.textureMatrix2d0 = GLKMatrix4Rotate( self.baseEffect.textureMatrix2d0 , self.timeSinceLastResume,<span class="hljs-number">1</span>),
+
+
+    self.baseEffect.textureMatrix2d0 = GLKMatrix4Translate(self.baseEffect.textureMatrix2d0,<span class="hljs-number">-0.5</span>,<span class="hljs-number">-0.5</span>,<span class="hljs-number">0</span>);
+
+}
+</code></pre>
+<p>OpenGLES_Ch6_4ViewController &#x7684;&#x201C; -update&#x201D;&#x65B9;&#x6CD5;&#x4F1A;&#x66F4;&#x65B0;&#x7EB9;&#x7406;&#x77E9;&#x9635;&#x4EE5;&#x53CA;&#x805A;&#x5149;&#x706F;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x53C2;&#x89C1;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<pre><code class="lang-c">
+- (<span class="hljs-keyword">void</span>)update
+{
+    [self updateSpotLightDirections];
+    [self updateTextureTransform];
+}
+</code></pre>
+<p>&#x8FD9;&#x4E9B;&#x5C31;&#x662F;&#x5B9E;&#x73B0;&#x7EB9;&#x7406;&#x65CB;&#x8F6C;&#x9700;&#x8981;&#x505A;&#x7684;&#x3002;&#x98D8;&#x626C;&#x65D7;&#x5E1C;&#x7684;&#x7F51;&#x683C;&#xFF0C;&#x4E0A;&#x7684;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x7684;&#x53D8;&#x5316;&#x548C;&#x7EB9;&#x7406;&#x77E9;&#x9635;&#x7684;&#x53D8;&#x5316;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x4EA7;&#x751F;&#x4E86;&#x4E00;&#x4E2A;&#x5F62;&#x8C61;&#x7684;&#x590D;&#x6742;&#x52A8;&#x753B;&#x3002;&#x5728;&#x4F8B;&#x5B50;OpenGLES_Ch6_4 &#x4E2D;&#x9700;&#x8981;&#x4F7F;&#x7528;AGLKTextureTransformBaseEffect&#x7C7B;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5728;&#x5199;&#x4F5C;&#x672C;&#x4E66;&#x65F6;&#xFF0C;GLKit&#x5185;&#x7F6E;&#x7684;GLKBaseEffect&#x7C7B;&#x8FD8;&#x6CA1;&#x6709;&#x5B9E;&#x73B0;&#x7EB9;&#x7406;&#x77E9;&#x9635;&#x3002;</p>
+<h2 id="642-openglesch65&#x793A;&#x4F8B;">6.4.2 OpenGLES_Ch6_5&#x793A;&#x4F8B;</h2>
+<p>&#x4F8B;&#x5B50;OpenGLES_Ch6_5&#x4F1A;&#x5BB9;&#x7EB3;&#x5728;&#x7EB9;&#x7406;&#x8D34;&#x56FE;&#x96C6;(textureatlas)&#x7684;&#x5355;&#x4E00;OpenGLES&#x7EB9;&#x7406;&#x4E2D;&#x7684;&#x591A;&#x4E2A;2D&#x56FE;&#x50CF;&#x3002;&#x6BCF;&#x4E2A;&#x56FE;&#x50CF;&#x90FD;&#x4E0E;&#x5176;&#x4ED6;&#x7684;&#x56FE;&#x50CF;&#x7A0D;&#x6709;&#x4E0D;&#x540C;&#xFF0C;&#x5E76;&#x5145;&#x5F53;&#x4E86;&#x77ED;&#x7247;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;
+&#x5E27;&#x3002;&#x5F53;&#x8FD9;&#x4E9B;&#x5E27;&#x5FEB;&#x901F;&#x8FDE;&#x7EED;&#x5730;&#x663E;&#x793A;&#x65F6;&#xFF0C;&#x4F1A;&#x5448;&#x73B0;&#x51FA;&#x8FD0;&#x52A8;&#x7684;&#x9519;&#x89C9;&#x3002;&#x4F8B;&#x5B50;OpenGLES_Ch6_5&#x4F7F;&#x7528;&#x4E86;&#x4E0E;OpenGLES_Ch6_4 &#x76F8;&#x540C;&#x7684;&#x57FA;&#x672C;&#x6280;&#x672F;&#x6765;&#x52A0;&#x8F7D;&#x548C;&#x6620;&#x5C04;&#x4E00;&#x4E2A;&#x7EB9; &#x7406;&#x5230;&#x51E0;&#x4F55;&#x56FE;&#x5F62;&#x4E0A;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;OpenGLES_Ch6_5&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x7EB9;&#x7406;&#x8D34;&#x56FE;&#x96C6;&#x3002;</p>
+<p>OpenGLES_Ch6_5 &#x7684;&#x7EB9;&#x7406;&#x8D34;&#x56FE;&#x96C6;&#x56FE;&#x50CF;&#x6709;1024&#x50CF;&#x7D20;&#x5BBD;,1024&#x50CF;&#x7D20;&#x957F;&#x3002;&#x5B83;&#x88AB;&#x5206;&#x4E3A;8&#x884C;&#xFF0C;&#x6BCF;&#x884C;128&#x50CF;&#x7D20;&#x9AD8;; 8&#x5217;&#xFF0C;&#x6BCF;&#x5217;128&#x50CF;&#x7D20;&#x5BBD;&#xFF0C;&#x53C2;&#x89C1;&#x56FE;6-9&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x7EB9;&#x7406;&#x8D34;&#x56FE;&#x96C6;&#x91CC;&#x6709;64&#x4E2A;&#x5B50;&#x56FE;&#x50CF;&#x7A7A;&#x95F4;&#xFF0C;&#x4F46;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x53EA;&#x9700;&#x8981;51&#x4E2A;&#x5B50;&#x56FE;&#x50CF;&#x7A7A;&#x95F4;&#x3002;&#x7ED3;&#x679C;&#xFF0C;&#x5728;&#x56FE;6-9&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x884C;&#x4EE5;&#x53CA;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x884C;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x4E00;&#x76F4;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x3002; </p>
+<div align="center">
+<img src="https://github.com/fangshufeng/gitments/blob/master/OpenGLES/chapter6/15626660345947.jpg?raw=true" width="500" height="400">
+<div>&#x56FE;&#x3000;6-9</div>
+</div> 
+
+
+<p>&#x4E0B;&#x9762;&#x7684;&#x5E38;&#x91CF;&#x7528;&#x6765;&#x8F85;&#x52A9;&#x8BA1;&#x7B97;&#x6BCF;&#x5E27;&#x52A8;&#x753B;&#x5728;&#x7EB9;&#x7406;&#x8D34;&#x56FE;&#x96C6;&#x5185;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<pre><code class="lang-c">
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> numberofMovieFrames = <span class="hljs-number">51</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> numberOfMovieFramesPerRow = <span class="hljs-number">8</span>
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> numberOfMovieFramesPerColumn = <span class="hljs-number">8</span>;
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> numberOfFramesPerSecond = <span class="hljs-number">15</span> ;
+</code></pre>
+<p>&#x548C;&#x4F8B;&#x5B50;OpenGLES_Ch6_4&#x4E00;&#x6837;&#xFF0C;&#x4F8B;&#x5B50;OpenGLES_Ch6_5&#x4F1A;&#x5206;&#x914D;&#x5728;0.0&#x5230;1.0&#x8303;&#x56F4;&#x5185;&#x7684;S&#x548C;T&#x7EB9;&#x7406;&#x5750;&#x6807;&#x5230;&#x7F51;&#x683C;&#x9876;&#x70B9;&#x4E4B;&#x95F4;&#x3002;&#x4E0D;&#x7528;&#x5BF9;&#x7EB9;&#x7406;&#x77E9;&#x9635;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#xFF0C;&#x6574;&#x4E2A;&#x8D34;&#x56FE;&#x96C6;&#x4F1A;&#x88AB;&#x6620;&#x5C04;&#x5230;&#x7F51;&#x683C;&#x51E0;&#x4F55;&#x56FE;&#x5F62;&#x4E0A;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x6BCF;&#x6B21;&#x53EA;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x52A8;&#x753B;&#x5E27;&#x8986;&#x76D6;&#x7684;&#x7F51;&#x683C;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x9996;&#x5148;&#x5E73;&#x79FB;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x7CFB;&#xFF0C;&#x4EE5;&#x4F7F;&#x539F;&#x70B9;{0.0, 0.0}&#x5BF9;&#x5E94;&#x4E8E;&#x5F53;&#x524D;&#x52A8;&#x753B;&#x5E27;&#x7684;&#x5DE6;&#x4E0B;&#x89D2;&#xFF0C;&#x7136;&#x540E;&#x7F29;&#x653E;&#x7EB9;&#x7406;&#x5750;&#x6807;&#x7CFB;&#x4EE5;&#x4F7F;&#x5F53;&#x524D;&#x5E27;&#x80FD;&#x591F;&#x8986;&#x76D6;&#x7F51;&#x683C;&#x51E0;&#x4F55;&#x4F53;:</p>
+<pre><code class="lang-c">
+- (<span class="hljs-keyword">void</span>)updateTextureTransform {
+    <span class="hljs-keyword">int</span> movieFrameNumber = (<span class="hljs-keyword">int</span>)<span class="hljs-built_in">floor</span> (self .timeSinceLastResume * numberOfFr amesPerSecond) %numberOfMovieFrames ;
+
+    GLfloat currentRowPosition = (movieFrameNumber % numberOfMovieFramesPerRow) &#x2605; <span class="hljs-number">1.0f</span> / numberofMovieFramesPerRow;
+
+    GLfloat currentColumnPosition = (movieFrameNumber / numberOfMovieFramesPerColumn) * <span class="hljs-number">1.0f</span> / number0fMovieF ramesPerColumn;
+
+    self baseEffect.textureMatrix2d0 = GLKMatrix4MakeTranslation(
+                currentRowPosition,
+                currentColumnPosition,
+                <span class="hljs-number">0.0f</span>);
+
+    self.baseEffect.textureMatrix2d0 =
+        GLKMatrix4Scale(
+        self.baseEffect.textureMatrix2d0,
+        <span class="hljs-number">1.0f</span>/numberOfMovieFr amesPerRow,
+        <span class="hljs-number">1.0f</span>/numberOfMovieFramesPerColumn ,
+        <span class="hljs-number">1.0f</span>);
+}
+</code></pre>
+<p>&#x8FD0;&#x884C;&#x4F8B;&#x5B50;OpenGLES_Ch6_5&#x6765;&#x89C2;&#x5BDF;&#x5728;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x4E2D;&#x52A8;&#x753B;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x3001;&#x52A8;&#x753B;&#x7684;&#x706F;&#x5149;&#x548C;&#x52A8;&#x753B;&#x7684;&#x7EB9;&#x7406;&#x7ED3;&#x5408;&#x8D77;&#x6765;&#x7684;&#x6548;&#x679C;&#x3002;&#x540C;&#x6837;&#xFF0C;&#x8BD5;&#x7740;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x6539;&#x53D8;&#x4F8B;&#x5B50;&#x7684;&#x89C6;&#x70B9;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;sinf()&#x7684;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x5468;&#x671F;&#x6027;&#x51FD;&#x6570;&#x6765;&#x6539;&#x53D8;GLKMatrix4MakeLookAt()&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;&#x5411;&#x4F8B;&#x5B50;OpenGLES_Ch6_1&#x6DFB;&#x52A0;&#x805A;&#x5149;&#x706F;&#x6765;&#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x66F4;&#x52A0;&#x903C;&#x771F;&#x7684;&#x78B0;&#x78B0;&#x8F66;&#x6A21;&#x62DF;&#x6548;&#x679C;&#x3002;</p>
+<h1 id="65-&#x5C0F;&#x7ED3;">6.5 &#x5C0F;&#x7ED3;</h1>
+<p>&#x9664;&#x4E86;X&#x3001;Y&#x548C;Z&#x5750;&#x6807;&#x7CFB;&#x7684;&#x4E09;&#x4E2A;&#x7EF4;&#x5EA6;&#x4E4B;&#x5916;&#xFF0C;&#x52A8;&#x753B;&#x63D0;&#x4F9B;&#x4E86;&#x7B2C;&#x56DB;&#x4E2A;&#x7EF4;&#x5EA6;:&#x65F6;&#x95F4;&#x3002;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#x4ECB;&#x7ECD;&#x7684;&#x52A8;&#x753B;&#x65B9;&#x6CD5;&#x662F;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5E94;&#x7528;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x5305;&#x62EC;&#x6E38;&#x620F;&#x3001;&#x79D1;&#x5B66;&#x53EF;&#x89C6;&#x5316;&#x548C;CocoaTouch&#x7528;&#x6237;&#x754C;&#x9762;&#x6548;&#x679C;&#x7B49;&#x3002;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x7684;&#x52A8;&#x753B;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x968F;&#x7740;&#x65F6;&#x95F4;&#x53D8;&#x6362;&#x5750;&#x6807;&#x7CFB;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4E0D;&#x7BA1;&#x662F;&#x5728;&#x4E00;&#x4E2A;&#x573A;&#x666F;&#x5185;&#x6765;&#x56DE;&#x79FB;&#x52A8;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD8;&#x662F;&#x53D8;&#x5316;&#x805A;&#x5149;&#x706F;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x6216;&#x662F;&#x65CB;&#x8F6C;&#x7EB9;&#x7406;&#xFF0C;&#x53C8;&#x6216;&#x8005;&#x4EE5;&#x7B2C;&#x4E00;&#x4EBA;&#x79F0;&#x89C6;&#x70B9;&#x5728;&#x4E00;&#x4E2A;&#x5730;&#x7262;&#x8FF7;&#x5BAB;&#x4E2D;&#x6765;&#x56DE;&#x8D70;&#x52A8;&#xFF0C;&#x90FD;&#x662F;&#x8FD9;&#x6837;&#x3002;&#x6539;&#x53D8;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x4F1A;&#x4EA7;&#x751F;&#x4E0E;&#x672C;&#x7AE0;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x98D8;&#x626C;&#x65D7;&#x5E1C;&#x76F8;&#x4F3C;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x4F46;&#x662F;&#x4E3A;&#x4E86;&#x83B7;&#x5F97;&#x6700;&#x4F73;&#x6027;&#x80FD;&#xFF0C;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x9891;&#x7E41;&#x5730;&#x4FEE;&#x6539;&#x9876;&#x70B9;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x7B2C;7&#x7AE0;&#x548C;&#x7B2C;8&#x7AE0;&#x4F1A;&#x6269;&#x5C55;&#x5728;&#x672C;&#x7AE0;&#x4E2D;&#x4ECB;&#x7ECD;&#x7684;SceneModel&#x548C;SceneAnimateMesh&#x7C7B;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x90E8;&#x5206;3D&#x5E94;&#x7528;&#x6765;&#x8BF4;&#x6A21;&#x578B;&#x662F;&#x5FC5;&#x4E0D;&#x53EF;&#x5C11;&#x7684;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x975E;&#x4E3B;&#x6D41;&#x7684;&#x3001;&#x786C;&#x7F16;&#x7801;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x4F1A;&#x5F88;&#x5FEB;&#x53D8;&#x5F97;&#x96BE;&#x4EE5;&#x63A7;&#x5236;&#x3002;&#x7B2C;7&#x7AE0;&#x4F1A;&#x63A2;&#x7D22;&#x6BD4;&#x672C;&#x7AE0;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x78B0;&#x78B0;&#x8F66;&#x3001;&#x6E9C;&#x51B0;&#x573A;&#x548C;&#x201C;&#x80FD;&#x591F;&#x53D1;&#x5149;&#x201D;&#x7684;&#x6A21;&#x578B;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x6A21;&#x578B;&#x3002;&#x7B2C;8&#x7AE0;&#x4F1A;&#x6F14;&#x793A;&#x4F7F;&#x7528;&#x5C3D;&#x53EF;&#x80FD;&#x5C11;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x5904;&#x7406;&#xFF0C;&#x6765;&#x4EA7;&#x751F;&#x903C;&#x771F;&#x7684;&#x53EF;&#x89C6;&#x6548;&#x679C;&#x7684;&#x591A;&#x4E2A;&#x6280;&#x672F;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="section6.3.html" class="navigation navigation-prev " aria-label="Previous page: 6.3、动画化颜色和灯光：例子OpenGLES_Ch6_3 ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter7/" class="navigation navigation-next " aria-label="Next page: 第7章 加载和使用模型 ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.4、动画化纹理","level":"1.7.4","depth":2,"next":{"title":"第7章 加载和使用模型 ","level":"1.8","depth":1,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[{"title":"7.1、建模工具和格式 ","level":"1.8.1","depth":2,"path":"chapter7/section7.1.md","ref":"chapter7/section7.1.md","articles":[]},{"title":"7.2、读取modelplist文件","level":"1.8.2","depth":2,"path":"chapter7/section7.2.md","ref":"chapter7/section7.2.md","articles":[]},{"title":"7.3、OpenGLES_Ch7_1示例 ","level":"1.8.3","depth":2,"path":"chapter7/section7.3.md","ref":"chapter7/section7.3.md","articles":[]},{"title":"7.4、高级模型 ","level":"1.8.4","depth":2,"path":"chapter7/section7.4.md","ref":"chapter7/section7.4.md","articles":[]}]},"previous":{"title":"6.3、动画化颜色和灯光：例子OpenGLES_Ch6_3 ","level":"1.7.3","depth":2,"path":"chapter6/section6.3.md","ref":"chapter6/section6.3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/section6.4.md","mtime":"2019-07-14T09:04:23.085Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-15T13:12:13.663Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

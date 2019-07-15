@@ -1,0 +1,1569 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.3、OpenGLES_Ch2_1示例  · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="section2.4.html" />
+    
+    
+    <link rel="prev" href="section2.2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    第一章 使用现代移动图形硬件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter1/section1.1.html">
+            
+                <a href="../chapter1/section1.1.html">
+            
+                    
+                    1.1、3D渲染 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chapter1/section1.2.html">
+            
+                <a href="../chapter1/section1.2.html">
+            
+                    
+                    1.2 、为图形处理器提供数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../chapter1/section1.2/section1.2.1.html">
+            
+                <a href="../chapter1/section1.2/section1.2.1.html">
+            
+                    
+                    1.2.1、缓存：提供数据的最好方式 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../chapter1/section1.2/section1.2.2.html">
+            
+                <a href="../chapter1/section1.2/section1.2.2.html">
+            
+                    
+                    1.2.2、帧缓存 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chapter1/section1.3.html">
+            
+                <a href="../chapter1/section1.3.html">
+            
+                    
+                    1.3、OpenGL ES的上下文 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chapter1/section1.4/">
+            
+                <a href="../chapter1/section1.4/">
+            
+                    
+                    1.4、一个3D场景的几何数据  
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../chapter1/section1.4/section1.4.1.html">
+            
+                <a href="../chapter1/section1.4/section1.4.1.html">
+            
+                    
+                    1.4.1、坐标系 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.2" data-path="../chapter1/section1.4/section1.4.2.html">
+            
+                <a href="../chapter1/section1.4/section1.4.2.html">
+            
+                    
+                    1.4.2 、矢量 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4.3" data-path="../chapter1/section1.4/section1.4.3.html">
+            
+                <a href="../chapter1/section1.4/section1.4.3.html">
+            
+                    
+                    1.4.3 、点、线、三角形 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chapter1/section1.5.html">
+            
+                <a href="../chapter1/section1.5.html">
+            
+                    
+                    1.5、小结 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第2章 让硬件为你工作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="section2.1.html">
+            
+                <a href="section2.1.html">
+            
+                    
+                    2.1 、使用OpenGL ES绘制一个Core Animation层 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="section2.2.html">
+            
+                <a href="section2.2.html">
+            
+                    
+                    2.2、结合Cocoa Touch和OpenGL ES 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="section2.3.html">
+            
+                <a href="section2.3.html">
+            
+                    
+                    2.3、OpenGLES_Ch2_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="section2.4.html">
+            
+                <a href="section2.4.html">
+            
+                    
+                    2.4、深入探讨GLKView是怎么工作的 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="section2.5.html">
+            
+                <a href="section2.5.html">
+            
+                    
+                    2.5、对于GLKit的推断 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第3章 纹理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/section3.1.html">
+            
+                <a href="../chapter3/section3.1.html">
+            
+                    
+                    3.1、什么是纹理 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/section3.2.html">
+            
+                <a href="../chapter3/section3.2.html">
+            
+                    
+                    3.2、OpenGLES_Ch3_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter3/section3.3.html">
+            
+                <a href="../chapter3/section3.3.html">
+            
+                    
+                    3.3、深入探讨GLKTextureLoader是怎么工作的 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter3/section3.4.html">
+            
+                <a href="../chapter3/section3.4.html">
+            
+                    
+                    3.4、OpenGLES_Ch3_3示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter3/section3.5.html">
+            
+                <a href="../chapter3/section3.5.html">
+            
+                    
+                    3.5、透明度、混合和多重纹理 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter3/section3.6.html">
+            
+                <a href="../chapter3/section3.6.html">
+            
+                    
+                    3.6、纹理压缩 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    第4章 散发一些光线 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/section4.1.html">
+            
+                <a href="../chapter4/section4.1.html">
+            
+                    
+                    4.1、环境光、漫反射光、镜面反射光 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/section4.2.html">
+            
+                <a href="../chapter4/section4.2.html">
+            
+                    
+                    4.2、计算有多少光线照向每个三角形 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/section4.3.html">
+            
+                <a href="../chapter4/section4.3.html">
+            
+                    
+                    4.3、使用GLKit灯光 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/section4.4.html">
+            
+                <a href="../chapter4/section4.4.html">
+            
+                    
+                    4.4、OpenGLES_Ch4_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/section4.5.html">
+            
+                <a href="../chapter4/section4.5.html">
+            
+                    
+                    4.5、把灯光烘焙进纹理中 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/section4.6.html">
+            
+                <a href="../chapter4/section4.6.html">
+            
+                    
+                    4.6、片元计算 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    第5章 改变你的视点 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/section5.1.html">
+            
+                <a href="../chapter5/section5.1.html">
+            
+                    
+                    5.1、深度渲染缓存（Depth Render Buffer）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/section5.2.html">
+            
+                <a href="../chapter5/section5.2.html">
+            
+                    
+                    5.2、例子OpenGLES_Ch5_1和例子OpenGLES_Ch5_2 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/section5.3.html">
+            
+                <a href="../chapter5/section5.3.html">
+            
+                    
+                    5.3、深入探讨不用GLKit添加深度缓存 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/section5.4.html">
+            
+                <a href="../chapter5/section5.4.html">
+            
+                    
+                    5.4、变换 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/section5.5.html">
+            
+                <a href="../chapter5/section5.5.html">
+            
+                    
+                    5.5、复合变换手册 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/section5.6.html">
+            
+                <a href="../chapter5/section5.6.html">
+            
+                    
+                    5.6、透视和平截头体 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    第6章 动画 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/section6.1.html">
+            
+                <a href="../chapter6/section6.1.html">
+            
+                    
+                    6.1、场景内移动：例子OpenGLES_Ch6_1 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/section6.2.html">
+            
+                <a href="../chapter6/section6.2.html">
+            
+                    
+                    6.2、动画化顶点数据 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/section6.3.html">
+            
+                <a href="../chapter6/section6.3.html">
+            
+                    
+                    6.3、动画化颜色和灯光：例子OpenGLES_Ch6_3 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter6/section6.4.html">
+            
+                <a href="../chapter6/section6.4.html">
+            
+                    
+                    6.4、动画化纹理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    第7章 加载和使用模型 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/section7.1.html">
+            
+                <a href="../chapter7/section7.1.html">
+            
+                    
+                    7.1、建模工具和格式 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter7/section7.2.html">
+            
+                <a href="../chapter7/section7.2.html">
+            
+                    
+                    7.2、读取modelplist文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter7/section7.3.html">
+            
+                <a href="../chapter7/section7.3.html">
+            
+                    
+                    7.3、OpenGLES_Ch7_1示例 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter7/section7.4.html">
+            
+                <a href="../chapter7/section7.4.html">
+            
+                    
+                    7.4、高级模型 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    第8章 特效 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/section8.1.html">
+            
+                <a href="../chapter8/section8.1.html">
+            
+                    
+                    8.1、天空盒
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter8/section8.2.html">
+            
+                <a href="../chapter8/section8.2.html">
+            
+                    
+                    8.2、深入探讨GLKSkyboxEffect是怎么工作的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter8/section8.3.html">
+            
+                <a href="../chapter8/section8.3.html">
+            
+                    
+                    8.3、粒子 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter8/section8.4.html">
+            
+                <a href="../chapter8/section8.4.html">
+            
+                    
+                    8.4、公告牌 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    第9章 优化 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter9/section9.1.html">
+            
+                <a href="../chapter9/section9.1.html">
+            
+                    
+                    9.1、尽可能减少渲染 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter9/section9.2.html">
+            
+                <a href="../chapter9/section9.2.html">
+            
+                    
+                    9.2、不要猜：解析（Profile） 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter9/section9.3.html">
+            
+                <a href="../chapter9/section9.3.html">
+            
+                    
+                    9.3、尽量减少缓存复制 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../chapter9/section9.4.html">
+            
+                <a href="../chapter9/section9.4.html">
+            
+                    
+                    9.4、尽量减少状态变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    第10章 地形和拾取 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter10/section10.1.html">
+            
+                <a href="../chapter10/section10.1.html">
+            
+                    
+                    10.1、地形的实现 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter10/section10.2.html">
+            
+                <a href="../chapter10/section10.2.html">
+            
+                    
+                    10.2、添加模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter10/section10.3.html">
+            
+                <a href="../chapter10/section10.3.html">
+            
+                    
+                    10.3、OpenGL ES摄像机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../chapter10/section10.4.html">
+            
+                <a href="../chapter10/section10.4.html">
+            
+                    
+                    10.4、拾取 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../chapter10/section10.5.html">
+            
+                <a href="../chapter10/section10.5.html">
+            
+                    
+                    10.5、优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../chapter11/">
+            
+                <a href="../chapter11/">
+            
+                    
+                    第11章 数学速查 
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../chapter11/section11.1.html">
+            
+                <a href="../chapter11/section11.1.html">
+            
+                    
+                    11.1、概述 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../chapter11/section11.2.html">
+            
+                <a href="../chapter11/section11.2.html">
+            
+                    
+                    11.2、解码矩阵 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../chapter11/section11.3.html">
+            
+                <a href="../chapter11/section11.3.html">
+            
+                    
+                    11.3、四元法 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../chapter11/section11.4.html">
+            
+                <a href="../chapter11/section11.4.html">
+            
+                    
+                    11.4、常用的图形数学 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../chapter12/">
+            
+                <a href="../chapter12/">
+            
+                    
+                    第12章 理清整体思路
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../chapter12/section12.1.html">
+            
+                <a href="../chapter12/section12.1.html">
+            
+                    
+                    12.1、概述 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../chapter12/section12.2.html">
+            
+                <a href="../chapter12/section12.2.html">
+            
+                    
+                    12.2、一切如故 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../chapter12/section12.3.html">
+            
+                <a href="../chapter12/section12.3.html">
+            
+                    
+                    12.3、设备动作 
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.3、OpenGLES_Ch2_1示例 </a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="23&#x3001;openglesch21&#x793A;&#x4F8B;">2.3&#x3001;OpenGLES_Ch2_1&#x793A;&#x4F8B;</h1>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4ECE;&#x7F51;&#x5740;<a href="http://peogles.cosmicthump.com/learning opengl-es-sample-code/" target="_blank">http://peogles.cosmicthump.com/learning opengl-es-sample-code/</a>&#x4E0A;&#x4E0B;&#x8F7D;&#x5173;&#x4E8E;&#x672C;&#x4E66;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x3002;Xcode&#x5DE5;&#x7A0B;&#x4EE5;&#x53CA;&#x6240;&#x6709;&#x521B;&#x5EFA;&#x672C;&#x4E66;&#x7684;&#x793A;&#x4F8B;&#x6240;&#x9700;&#x8981;&#x7684;&#x6587;&#x4EF6;&#x90FD;&#x5305;&#x542B;&#x5728;&#x91CC;&#x9762;&#x3002;&#x4E00;&#x4E2A;&#x53EB;&#x505A;OpenGLES_Ch2_1.xcodeproj &#x7684;&#x6587;&#x4EF6;&#x4FDD;&#x5B58;&#x4E86;&#x5173;&#x4E8E;&#x5DE5;&#x7A0B;&#x81EA;&#x8EAB;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5728;&#x7535;&#x8111;&#x4E0A;&#x6B63;&#x786E;&#x5730;&#x5B89;&#x88C5;&#x4E86;&#x82F9;&#x679C;&#x7684;iOs5&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#x5305;&#x548C;Xcode&#x4E4B;&#x540E;&#xFF0C;&#x53CC;&#x51FB;OpenGLES_Ch2_1.xcodeproj&#x6587;&#x4EF6;&#x6765;&#x5F00;&#x542F;Xcode&#x5E76;&#x52A0;&#x8F7D;&#x5DE5;&#x7A0B;&#x3002;&#x5728;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x70B9;&#x51FB;Xcode&#x5DE5;&#x5177;&#x680F;&#x7684;Run&#x6309;&#x94AE;&#x6765;&#x7F16;&#x8BD1;&#x5E76;&#x8FDE;&#x63A5;&#x5DE5;&#x7A0B;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x4F1A;&#x542F;&#x52A8;&#x82F9;&#x679C;&#x7684;iPhone&#x6A21;&#x62DF;&#x5668;&#x6765;&#x8FD0;&#x884C;OpenGLES_Ch2_1 &#x5E94;&#x7528;&#x3002;</p>
+<hr>
+<p><strong>&#x6CE8;&#x610F;</strong>
+&#x672C;&#x4E66;&#x7684;&#x6240;&#x6709;&#x4F8B;&#x5B50;&#x90FD;&#x662F;&#x7528;&#x82F9;&#x679C;&#x7684;ARC&#x6280;&#x672F;&#x6765;&#x4E3A;Objective-C&#x5BF9;&#x8C61;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#x7684;&#x3002;&#x5728;&#x65B0;
+&#x521B;&#x5EFA;&#x7684;iOS Xcode&#x5DE5;&#x7A0B;&#x4E2D;&#x4F1A;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;ARC&#x3002;&#x4F7F;&#x7528;ARC&#x907F;&#x514D;&#x4E86;&#x624B;&#x52A8;&#x4E3A;&#x5BF9;&#x8C61;&#x7BA1;&#x7406;&#x5185;
+&#x5B58;&#x5E76;&#x7B80;&#x5316;&#x4E86;&#x4F8B;&#x5B50;&#x4EE3;&#x7801;&#x3002;</p>
+<hr>
+<p>&#x56FE;2-6&#x5217;&#x51FA;&#x4E86;&#x4F8B;&#x5B50;&#x4E2D;&#x6784;&#x5EFA;&#x548C;&#x8FDE;&#x63A5;&#x7684;&#x6587;&#x4EF6;&#x3002;&#x672C;&#x8282;&#x7684;&#x5176;&#x4F59;
+&#x90E8;&#x5206;&#x4ECB;&#x7ECD;&#x4E86;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x548C;&#x76EE;&#x7684;&#x3002;OpenGLES<em> Ch2</em> 1 &#x5DE5;&#x7A0B;&#x662F;&#x4F7F;&#x7528;Xcode&#x7684;&#x6807;&#x51C6;&#x5355;&#x89C6;&#x56FE;&#x5E94;&#x7528;( Single View Application)&#x6A21;&#x677F;&#x521B;&#x5EFA;&#x7684;&#x3002;&#x8FD9;&#x4E2A;&#x6A21;&#x677F;&#x8BBE;&#x7F6E;&#x65B0;&#x5DE5;&#x7A0B;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7531;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684;&#x586B;&#x6EE1;&#x6574;&#x4E2A;&#x5C4F;&#x5E55;&#x7684;UIView(&#x6216;&#x8005;&#x5176;&#x5B50;&#x7C7B;)&#x5B9E;&#x4F8B;&#x7EC4;&#x6210;&#x7684;&#x7B80;&#x5355;&#x5E94;&#x7528;&#x3002;&#x5176;&#x4ED6;&#x6A21;&#x677F;&#x4E3A;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;iOs&#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x4E86;-&#x4E00;&#x4E2A;&#x8D77;&#x59CB;&#x70B9;&#x3002;&#x5355;&#x89C6;&#x56FE;&#x5E94;&#x7528;&#x6A21;&#x677F;&#x751F;&#x6210;&#x4E86;--&#x4E2A;&#x547D;&#x540D;&#x4E3A;OpenGLES_ Ch2_1 AppDelegate&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x5E94;&#x7528;&#x59D4;&#x6258;&#x7C7B;&#xFF0C;&#x4E00;&#x4E2A;&#x547D;&#x540D;&#x4E3A;OpenGLES_Ch2_1ViewController &#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x89C6;&#x56FE;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x3002;</p>
+<div align="center">
+<img src="https://github.com/fangshufeng/gitments/blob/master/OpenGLES/chapter2/15626646801234.jpg?raw=true
+" width="200" height="250">
+<div>&#x56FE;&#x3000;2-6</div>
+</div> 
+
+<h2 id="231&#x3001;openglesch21appdelegate&#x7C7B;">2.3.1&#x3001;OpenGLES_Ch2_1AppDelegate&#x7C7B;</h2>
+<p>OpenGLES_Ch2_1AppDelegate.h &#x6587;&#x4EF6;&#x662F;&#x5728;&#x5DE5;&#x7A0B;&#x521A;&#x521B;
+&#x5EFA;&#x65F6;&#x7531;Xcode&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x3002;OpenGLES_Ch2_1 AppDelegate.h&#x6587;&#x4EF6;&#x5305;&#x542B;&#x5BF9;OpenGLES_Ch2_1AppDelegate &#x7C7B;&#x7684;Objective-C &#x58F0;&#x660E;&#x3002;OpenGLES_Ch2_1&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x4F7F;&#x7528;&#x751F;&#x6210;&#x7684;&#x7C7B;&#x3002;</p>
+<p>OpenGLES<em>Ch2_1AppDelegate.m&#x6587;&#x4EF6;&#x4E5F;&#x662F;&#x5728;&#x5DE5;&#x7A0B;&#x521A;&#x521B;&#x5EFA;&#x65F6;&#x7531;Xcode&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x3002;OpenGLES</em> Ch2<em> 1AppDelegate.m &#x6587;&#x4EF6;&#x5305;&#x542B;&#x5BF9;OpenGLES</em> Ch2_ lAppDelegate &#x7C7B;&#x7684;Objective-C&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x3002;&#x751F;&#x6210;&#x7684;&#x4EE3;&#x7801;&#x5305;&#x542B;&#x591A;&#x4E2A;-&#x4E00;&#x822C;&#x7531;&#x5E94;&#x7528;&#x7684;&#x59D4;&#x6258;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x5B58;&#x6839;&#x5B9E;&#x73B0;&#x3002;OpenGLES_Ch2_1&#x4F8B;&#x5B50;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x505A;&#x4EFB;&#x4F55;&#x4FEE;&#x6539;&#x4F7F;&#x7528;&#x751F;&#x6210;&#x7684;&#x7C7B;&#x3002;</p>
+<h2 id="232-&#x3001;storyboards">2.3.2 &#x3001;Storyboards</h2>
+<p>MainStoryboard iPhone.storyboard &#x548C;MainStoryboard iPad.storyboard &#x6587;&#x4EF6;&#x4E5F;&#x662F;&#x7531;Xcode
+&#x7684;&#x5355;&#x89C6;&#x56FE;&#x5E94;&#x7528;&#x6A21;&#x677F;&#x751F;&#x6210;&#x7684;&#x3002;&#x5728;Xcode&#x4E2D;&#x53EF;&#x4EE5;&#x53EF;&#x89C6;&#x5316;&#x5730;&#x7F16;&#x8F91;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x4EE5;&#x8BBE;&#x5B9A;&#x7528;&#x6237;&#x754C;&#x9762;&#x3002;iPad&#x4E0E;iPhone&#x7684;&#x5C4F;&#x5E55;&#x5927;&#x5C0F;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x6237;&#x754C;&#x9762;&#x3002;&#x5F53;&#x4F8B;&#x5B50;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;Open-GLES_Ch2_1
+&#x793A;&#x4F8B;&#x4F1A;&#x81EA;&#x52A8;&#x8BFB;&#x53D6;&#x4E0E;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x76F8;&#x9002;&#x5408;&#x7684;Storyboard&#x3002;Storyboards &#x4F1A;&#x628A;UIViewController&#x5B9E;&#x4F8B;&#x4EE5;&#x53CA;&#x4E0E;&#x5176;&#x76F8;&#x5173;&#x8054;&#x7684;UIView&#x5B9E;&#x4F8B;&#x8054;&#x7CFB;&#x8D77;&#x6765;&#x3002;Storyboards&#x4F1A;&#x6307;&#x5B9A;&#x89C6;&#x56FE;&#x63A7;&#x5236;&#x5668;&#x4E4B;&#x95F4;&#x7684;&#x8FC7;&#x6E21;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x5E94;&#x7528;&#x7684;&#x5927;&#x90E8;&#x5206;&#x7528;&#x6237;&#x4EA4;&#x4E92;&#x8BBE;&#x8BA1;&#xFF0C;&#x6F5C;&#x5728;&#x5730;&#x6D88;&#x9664;&#x4E86;&#x539F;&#x672C;&#x9700;&#x8981;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x3002;&#x4F46;&#x662F;&#xFF0C;OpenGLES_Ch2_1&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x662F;&#x5982;&#x6B64;&#x7B80;&#x5355;&#x4EE5;&#x81F3;&#x4E8E;&#x5B83;&#x53EA;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;&#x89C6;&#x56FE;&#x63A7;&#x5236;&#x5668;&#x4E00;OpenGLES_Ch2_1ViewController &#x7C7B;&#x7684;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#x3002;</p>
+<h2 id="233&#x3001;openglesch21viewcontroller&#x7C7B;&#x7684;interface">2.3.3&#x3001;OpenGLES_Ch2_1ViewController&#x7C7B;&#x7684;interface</h2>
+<p>OpenGLES<em> Ch2</em> 1ViewController.h &#x6587;&#x4EF6;&#x539F;&#x672C;&#x662F;&#x5728;&#x5DE5;&#x7A0B;&#x521A;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x7531;Xcode&#x751F;&#x6210;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x505A;&#x4E86;&#x4E00;-&#x4E9B;&#x4FEE;&#x6539;&#x3002;OpenGLES<em> Ch2</em> 1ViewController.h &#x5305;&#x542B;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x7528;&#x4E8E;OpenGLES<em>Ch2</em> 1 ViewController&#x7C7B;&#x7684;Objective-C&#x58F0;&#x660E;&#x3002;&#x7C97;&#x4F53;&#x7684;&#x4EE3;&#x7801;&#x662F;&#x5BF9;&#x6240;&#x751F;&#x6210;&#x4EE3;&#x7801;&#x7684;&#x4E3B;&#x8981;&#x4FEE;&#x6539;&#x3002;</p>
+<pre><code class="lang-oc">// OpenGLES_ Ch2_ 1ViewController.h
+// OpenGLES_ Ch2_ 1
+
+#import &lt;GLKit/GLKit.h&gt;
+@interface OpenGLES_Ch2_1ViewController : GLKViewController
+(
+GLuint vertexBufferID;
+)
+@property (strong, nonatomic) GLKBaseBffect *baseBffect;
+@end
+</code></pre>
+<p>&#x6587;&#x4EF6;&#x4EE5;&#x4E00;&#x6BB5;&#x6CE8;&#x91CA;&#x5F00;&#x59CB;&#x3002;Cocoa Touch GLKit&#x6846;&#x67B6;&#x63A5;&#x53E3;&#x662F;&#x901A;&#x8FC7;#import&#x7F16;&#x8BD1;&#x6307;&#x4EE4;&#x5BFC;&#x4EBA;&#x7684;&#xFF0C;&#x8FD9;&#x4E0E;ANSI C&#x7684;#include&#x6307;&#x4EE4;&#x7C7B;&#x4F3C;&#x3002;&#x4E24;&#x4E2A;&#x6307;&#x4EE4;&#x90FD;&#x628A;&#x7279;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;&#x63D2;&#x4EBA;&#x5230;&#x5305;&#x542B;&#x8FD9;&#x4E9B;&#x6307;&#x4EE4;&#x7684;&#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#x4E2D;&#x3002;&#x5F53;&#x76F8;&#x540C;&#x7684;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x88AB;&#x5BFC;&#x4EBA;&#x5230;&#x6BCF;&#x4E2A;&#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#x7684;&#x6B21;&#x6570;&#x8D85;&#x8FC7;&#x4E00;&#x6B21;&#x65F6;,Objective-C&#x7684;#import&#x6307;&#x4EE4;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x5176;&#x963B;&#x6B62;&#xFF0C;&#x8FD9;&#x91CC;&#x9996;&#x9009;#import,&#x867D;&#x7136;Objective-C&#x4E5F;
+&#x652F;&#x6301;#include&#x3002;</p>
+<p>OpenGLES_Ch2_1ViewController &#x662F;GLKViewController&#x7C7B;&#x7684;&#x4E2A;&#x5B50;&#x7C7B;&#x5E76;&#x4ECE;GLKViewController
+&#x7EE7;&#x627F;&#x4E86;&#x5F88;&#x591A;&#x57FA;&#x672C;&#x529F;&#x80FD;&#xFF0C;GLKViewController&#x53C8;&#x4ECE;&#x5B83;&#x7684;&#x8D85;&#x7C7B;UIViewController&#x7EE7;&#x627F;&#x4E86;&#x5F88;&#x591A;&#x529F;&#x80FD;&#x3002;&#x7279;&#x522B;&#x5730;&#xFF0C;GLKViewController &#x4F1A;&#x81EA;&#x52A8;&#x5730;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;OpenGL ES&#x548C;&#x5E94;&#x7528;&#x7684;GLKView&#x5B9E;&#x4F8B;&#x4EE5;&#x54CD;&#x5E94;&#x8BBE;&#x5907;&#x65B9;&#x5411;&#x7684;&#x53D8;&#x5316;&#x5E76;&#x53EF;&#x89C6;&#x5316;&#x8FC7;&#x6E21;&#x6548;&#x679C;&#xFF0C;&#x4F8B;&#x5982;&#x6DE1;&#x51FA;&#x548C;&#x6DE1;&#x4EBA;&#x3002;</p>
+<p>&#x5728;OpenGLES_Ch2_1ViewController &#x7684;&#x63A5;&#x53E3;&#x4E2D;&#x58F0;&#x660E;&#x7684;vertexBufferID&#x53D8;&#x91CF;&#x4FDD;&#x5B58;&#x4E86;&#x7528;&#x4E8E;&#x76DB;&#x653E;&#x672C;&#x4F8B;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x7684;&#x7F13;&#x5B58;&#x7684;OpenGl ES&#x6807;&#x8BC6;&#x7B26;&#x3002;OpenGLES_Ch2_1View-
+Controller&#x7C7B;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#x4E86;&#x7F13;&#x5B58;&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x521D;&#x59CB;&#x5316;&#x548C;&#x4F7F;&#x7528;&#x3002;</p>
+<p>OpenGLES_Ch2_1ViewController &#x63A5;&#x53E3;&#x4E2D;&#x7684;baseEffect&#x5C5E;&#x6027;&#x58F0;&#x660E;&#x4E86;&#x4E00;&#x4E2A;GLK BaseEffect&#x5B9E;&#x4F8B;&#x7684;&#x6307;&#x9488;&#x3002;Objective-C&#x5C5E;&#x6027;&#x58F0;&#x660E;&#x4E86;&#x4E0E;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x76F8;&#x4F3C;&#x7684;&#x503C;&#x3002;Objective-C&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x201C;&#x70B9;&#x7B26;&#x53F7;&#x201D; &#x8BBF;&#x95EE;&#xFF0C;&#x4F8B;&#x5982;someObject.baseEffect ;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x8BBF;&#x95EE;&#xFF0C;&#x6BD4;&#x5982;&#x6309;
+&#x7167;-set<propertyname>&#x547D;&#x540D;&#x7EA6;&#x5B9A;&#x7684;&#x7528;&#x4E8E;&#x8BBE;&#x5B9A;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x6309;&#x7167;-<propertyname>&#x547D;&#x540D;&#x7EA6;&#x5B9A;&#x7684;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x8FD9;&#x4E9B;&#x7279;&#x522B;&#x547D;&#x540D;&#x7684;&#x65B9;&#x6CD5;&#x53EB;&#x505A;&#x8BBF;&#x95EE;&#x5668;(accessor) &#x3002;-baseEffct&#x8BBF;&#x95EE;&#x5668;&#x7528;&#x4E8E;&#x8FD4;&#x56DE;OpenGLES_Ch2_1ViewController &#x7684;baseEffect&#x5C5E;&#x6027;&#x7684;&#x503C;&#x3002;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x8BBF;&#x95EE;&#x5668;&#x662F;&#x201C;-setBaseEffect:&#x201D;&#x3002;&#x5C5E;&#x6027;&#x901A;&#x5E38;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x4EE5;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x7684;&#x5F62;&#x5F0F;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#x53EF;&#x80FD;&#x662F;&#x6309;&#x9700;&#x8BA1;&#x7B97;&#x7684;&#x6216;&#x8005;&#x662F;&#x4ECE;&#x6570;&#x636E;&#x5E93;&#x91CC;&#x52A0;&#x8F7D;&#x7684;&#x3002;Objective-C&#x7684;&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x8C61;&#x4E0D;&#x9700;&#x8981;&#x66B4;&#x9732;&#x7C7B;&#x58F0;&#x660E;&#x4E2D;&#x7684;&#x503C;&#x662F;&#x600E;&#x4E48;&#x4FDD;&#x5B58;&#x7684;&#x5C31;&#x80FD;&#x63D0;&#x4F9B;&#x503C;&#x7684;&#x58F0;&#x660E;&#x65B9;&#x5F0F;&#x3002;&#x5F53;&#x70B9;&#x7B26;&#x53F7;&#x88AB;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x6216;&#x8BBE;&#x7F6E;--&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x65F6;&#xFF0C;Objective-C&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x81EA;&#x52A8;&#x5730;&#x66FF;&#x6362;&#x6210;&#x5BF9;&#x4E8E;&#x9002;&#x5F53;&#x547D;&#x540D;&#x7684;
+&#x8BBF;&#x95EE;&#x5668;&#x65B9;&#x6CD5;&#x7684;&#x8BBF;&#x95EE;&#x3002;Objective-C&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x8BBF;&#x95EE;&#x5668;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x6211;&#x4EEC;&#x4F1A;&#x5728;OpenGLES_Ch2_1ViewController &#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x4E2D;&#x8BB2;&#x5230;&#x3002;</propertyname></propertyname></p>
+<p>GLK BaseEffect&#x662F;GLKit&#x63D0;&#x4F9B;&#x7684;&#x53E6;-&#x4E00;&#x4E2A;&#x5185;&#x5EFA;&#x7C7B;&#x3002;GLKBaseEffect&#x7684;&#x5B58;&#x5728;&#x662F;&#x4E3A;&#x4E86;&#x7B80;&#x5316;OpenGLES&#x7684;&#x5F88;&#x591A;&#x5E38;&#x7528;&#x64CD;&#x4F5C;&#x3002;GLKBaseEffect&#x9690;&#x85CF;&#x4E86;iOs&#x8BBE;&#x5907;&#x652F;&#x6301;&#x7684;&#x591A;&#x4E2A;OpenGL
+ES&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x5F02;&#x3002;&#x5728;&#x5E94;&#x7528;&#x4E2D;&#x4F7F;&#x7528;GLKBaseEffect&#x80FD;&#x51CF;&#x5C11;&#x9700;&#x8981;&#x7F16;&#x5199;&#x7684;&#x4EE3;&#x7801;&#x91CF;&#x3002;&#x5728;OpenGLES_Ch2_1ViewController &#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#x4E86;GLKBaseEffect&#x3002;</p>
+<h2 id="234&#x3001;openglesch21viewcontroller&#x7C7B;&#x7684;&#x5B9E;&#x73B0;">2.3.4&#x3001;OpenGLES_Ch2_1ViewController&#x7C7B;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>OpenGLES_Ch2_1ViewController.m &#x6587;&#x4EF6;&#x662F;&#x539F;&#x5148;&#x90A3;&#x4E2A;&#x5DE5;&#x7A0B;&#x521A;&#x5EFA;&#x7ACB;&#x65F6;Xcode&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E3A;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x4FEE;&#x6539;&#x3002;OpenGLES_Ch2_1 ViewController.m&#x6587;&#x4EF6;&#x5305;&#x542B;&#x4E86;&#x9488;&#x5BF9;OpenGLES_Ch2_1ViewController &#x7C7B;&#x7684;Objctive-C&#x7684;&#x5B9E;&#x73B0;&#x3002;&#x5728;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x4E2D;&#x53EA;&#x5B9A;&#x4E49;&#x4E86;3&#x4E2A;&#x65B9;&#x6CD5;:-viewDidLoad&#x3001;-glkView:drawInRect: &#x548C;-viewDidUnload&#x3002;&#x672C;&#x8282;&#x4F1A;&#x8BE6;&#x7EC6;i&#x89E3;&#x91CA;&#x8FD9;3&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x672C;&#x7AE0;&#x548C;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x6E90;&#x7801;&#x4E4B;&#x4E0A;&#x5EFA;&#x7ACB;&#x3002;&#x4EE5;&#x4E0B;&#x5C31;&#x662F;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x7684;&#x5F00;&#x59CB;&#x90E8;&#x5206;:</p>
+<pre><code class="lang-oc">
+// OpenGLES_ Ch2_ 1ViewController .m .
+// OpenGLES_ Ch2_ 1
+
+#import &quot;OpenGLES_Ch2_1ViewController.h&quot;
+@implementation OpenGLES_Ch2_1ViewController
+@synthesize baseEffect ;
+</code></pre>
+<p>@synthesize baseEffect ;&#x8868;&#x8FBE;&#x5F0F;&#x8BA9;Objective-C&#x7F16;&#x8BD1;&#x5668;&#x4E3A;baseEffect&#x5C5E;&#x6027;&#x81EA;&#x52A8;&#x5730;&#x751F;&#x6210;&#x8BBF;&#x95EE;&#x5668;&#x65B9;&#x6CD5;&#x3002;&#x76F8;&#x5BF9;&#x4E8E;&#x4F7F;&#x7528;@synthesize&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x663E;&#x5F0F;&#x5B9E;&#x73B0;&#x6070;&#x5F53;
+&#x547D;&#x540D;&#x7684;&#x8BBF;&#x95EE;&#x5668;&#x65B9;&#x6CD5;&#x3002;&#x5BF9;&#x4E8E;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x6765;&#x8BF4;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x5B9E;&#x73B0;&#x5176;&#x8BBF;&#x95EE;&#x5668;&#x7684;&#x4EFB;&#x4F55;&#x7406;&#x7531;&#xFF0C;&#x56E0;&#x4E3A;&#x6807;&#x51C6;&#x7684;&#x8BBF;&#x95EE;&#x5668;&#x884C;&#x4E3A;&#x5C31;&#x8DB3;&#x591F;&#x4E86;&#x3002;&#x53EA;&#x6709;&#x5728;&#x5C5E;&#x6027;&#x7684;&#x5B58;&#x50A8;&#x9700;&#x8981;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x65F6;&#x6216;&#x8005;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x53D8;&#x5316;&#x9700;&#x8981;&#x8C03;&#x7528;&#x81EA;
+&#x5B9A;&#x4E49;&#x5E94;&#x7528;&#x903B;&#x8F91;&#x65F6;&#x624D;&#x9700;&#x8981;&#x663E;&#x5F0F;&#x5730;&#x7F16;&#x5199;&#x8BBF;&#x95EE;&#x5668;&#x3002;</p>
+<p>&#x5728;OpenGLES_Ch2_1ViewController.m &#x4E2D;&#x7684;&#x63A5;&#x4E0B;&#x6765;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;C&#x7ED3;&#x6784;&#x4F53;SceneVertex,&#x7528;&#x6765;&#x4FDD;&#x5B58;&#x4E00;&#x4E2A;GLKVector3&#x7C7B;&#x578B;&#x7684;&#x6210;&#x5458;positionCoords&#x3002;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x7B2C; 1&#x7AE0;,&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x8D77;&#x59CB;&#x4E8E;&#x5750;&#x6807;&#x7CFB;&#x539F;&#x70B9;&#x7684;&#x77E2;&#x91CF;&#x6765;&#x8868;&#x793A;&#x3002;GLKit&#x7684;GLKVector3&#x7C7B;&#x578B;&#x4FDD;&#x5B58;&#x4E86;3&#x4E2A;&#x5750;&#x6807;:X&#x3001;Y&#x548C;Z&#x3002;
+vertices&#x53D8;&#x91CF;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x9876;&#x70B9;&#x6570;&#x636E;&#x521D;&#x59CB;&#x5316;&#x7684;&#x666E;&#x901A;C&#x6570;&#x7EC4;&#xFF0C;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7528;&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E09;&#x89D2;&#x5F62;&#x3002;</p>
+<pre><code class="lang-oc">The vertices variable is as an ordinary C array initialized with vertex data to define a triangle.
+///////////////////////////////
+// This data type is used to store information for each vertex
+typedef struct {
+    GLKVector3 posit ionCoords;    
+}
+SceneVertex;
+
+///////////////
+// Define vertex data for a triangle to use in example
+
+static const SceneVertex vertices[ ] = {
+    {{-0.5f, -0.5f, 0.0)}, //lower left corner
+    {{0.5f, -0.5f, 0.0}}, // lower right corner
+    {{-0.5f,0.5f, 0.0}}// upper left corner
+};
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x5750;&#x6807;&#x662F;&#x6311;&#x9009;&#x51FA;&#x6765;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x9ED8;&#x8BA4;&#x7684;&#x7528;&#x4E8E;-&#x4E00;&#x4E2A;OpenGL&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x53EF;&#x89C1;&#x5750;&#x6807;&#x7CFB;&#x662F;&#x5206;&#x522B;&#x6CBF;&#x7740;X&#x3001;Y&#x3001;Z&#x8F74;&#x4ECE;-1.0&#x5EF6;&#x4F38;&#x5230;1.0&#x7684;&#x3002;&#x4F8B;&#x5B50;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x5750;&#x6807;&#x628A;&#x5B83;&#x7F6E;&#x4E8E;&#x53EF;&#x89C1;&#x5750;&#x6807;&#x7CFB;&#x7684;&#x4E2D;&#x592E;&#x5E76;&#x4E14;&#x4E0E;X&#x548C;Y&#x8F74;&#x6240;&#x5F62;&#x6210;&#x7684;&#x5E73;&#x9762;&#x5BF9;&#x9F50;&#x3002;&#x56FE;2-7&#x663E;&#x793A;&#x4E86;vertices[] &#x5B9A;&#x4E49;&#x7684;&#x5728;&#x4E00;&#x4E2A;&#x4EE3;&#x8868;&#x9ED8;&#x8BA4;OpenGL ES&#x5750;&#x6807;&#x7CFB;&#x7684;&#x53EF;&#x89C1;&#x90E8;&#x5206;&#x7684;&#x7ACB;&#x65B9;&#x4F53;&#x5185;&#x7684;&#x4E09;&#x89D2;&#x5F62;&#x3002;</p>
+<h3 id="1--viewdidload">1. <code>-viewDidLoad</code></h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7684;-viewDidLoad&#x65B9;&#x6CD5;&#x4E3A;OpenGL ES&#x63D0;&#x4F9B;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x3002;-viewDidLoad&#x65B9;&#x6CD5;&#x7EE7;&#x627F;&#x81EA;GLKViewController&#x7C7B;&#xFF0C;&#x5F53;&#x4E0E;GLKViewController&#x76F8;&#x5173;&#x8054;&#x7684;&#x5E94;&#x7528;&#x7684;GLKView
+&#x5B9E;&#x4F8B;&#x88AB;&#x4ECE;storyboard&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;OpenGLES_Ch2_1ViewController&#x63D0;&#x4F9B;&#x4E86;&#x5B83;&#x81EA;&#x5DF1;&#x7684;-viewDidLoad&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5728;&#x8FBC;&#x4E2A;&#x5955;&#x73FE;&#x4E2D;&#x4F1A;&#x9996;&#x5148;&#x51CB;&#x7528;&#x5B83;&#x7684;&#x8D85;&#x7C7B;&#x7684;&#x5B9E;&#x73B0;:</p>
+<div align="center">
+<img src="https://github.com/fangshufeng/gitments/blob/master/OpenGLES/chapter2/15626646923437.jpg?raw=true" width="600" height="400">
+<div>&#x56FE;&#x3000;2-7</div>
+</div> 
+
+
+
+
+<pre><code class="lang-c"><span class="hljs-comment">// Called when the view controller&apos;s view is loaded</span>
+<span class="hljs-comment">//Perform initialization before the view &#xEC;s asked to draw</span>
+- (<span class="hljs-keyword">void</span>)viewDidLoad {
+    [super viewDidLoad];
+    <span class="hljs-comment">// Verify the type of view created automatically by the</span>
+    <span class="hljs-comment">//Interface Builder storyboard</span>
+    GLKView *view = (GLKView *)self.view;
+    NSAssert( [view isKind0fClass:[GLKView <span class="hljs-keyword">class</span>]],@<span class="hljs-string">&quot;view controller&apos;s view is not a GLKView&quot;</span> );
+    <span class="hljs-comment">// Create an OpenGL ES 2.0 context and provide it to the</span>
+    <span class="hljs-comment">// view</span>
+    view.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPI0penGLES2];
+    <span class="hljs-comment">// Make the new context current</span>
+    [EAGLContext setCurrentContext:view.context];
+    <span class="hljs-comment">// Create a base effect that provides standard 0penGL ES 2.0</span>
+    <span class="hljs-comment">// Shading Language programs and set constants to be used for</span>
+    <span class="hljs-comment">// a11 subsequent rendering</span>
+    self.baseEffect = [[GLKBaseEffect alloc] init];
+    self.baseEffect.seConstantColor = GL_TRUE;
+    self.baseEffect.constantColor = GLKVector4Make(
+    <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// Red</span>
+    <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// Green</span>
+    <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// Blue</span>
+    <span class="hljs-number">1.0f</span>);<span class="hljs-comment">// Alpha</span>
+<span class="hljs-comment">// Set the background color stored in the current context</span>
+    glClearColor(<span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>); <span class="hljs-comment">//    background color</span>
+<span class="hljs-comment">// Generate, bind, and initialize contents of a buffer to be</span>
+<span class="hljs-comment">// stored in GPU memory</span>
+    glGenBuffers(<span class="hljs-number">1</span>,<span class="hljs-comment">//  STEP 1</span>
+        &amp;vertexBufferID);
+    glBindBuffer(GL_ ARRAY_ BUPFER, <span class="hljs-comment">// STEP 2</span>
+        vertexBufferID);
+    glBufferData(<span class="hljs-comment">//STEP 3</span>
+        GL_ ARRAY_ BUFFER, <span class="hljs-comment">// Initialize buffer contents</span>
+        <span class="hljs-keyword">sizeof</span> (vertices), <span class="hljs-comment">//Number of bytes to copy</span>
+        vertices,<span class="hljs-comment">// Address of bytes to copy</span>
+        GL_ STATIC_ DRAW); <span class="hljs-number">1</span><span class="hljs-comment">//Hint: cache in GPU memory</span>
+}
+</code></pre>
+<p>-viewDidLoad&#x65B9;&#x6CD5;&#x4F1A;&#x5C06;&#x5B83;&#x7EE7;&#x627F;&#x7684;view&#x5C5E;&#x6027;&#x7684;&#x503C;&#x8F6C;&#x6362;&#x4E3A;GLKView&#x7C7B;&#x578B;&#x3002;&#x7C7B;&#x4F3C;OpenGLES_Ch2_1ViewController&#x7684;GLKViewController&#x7684;&#x5B50;&#x7C7B;&#x53EA;&#x80FD;&#x4E0E;GLKView&#x5B9E;&#x4F8B;&#x6216;&#x8005;&#x662F;GLKView&#x5B50;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x4E00;&#x8D77;&#x6B63;&#x786E;&#x5DE5;&#x4F5C;&#x3002;&#x4F46;&#x662F;,&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;storyboard&#x6587;&#x4EF6;&#x5B9A;&#x4E49;&#x4E86;&#x54EA;&#x4E00;&#x4E2A;&#x662F;&#x4E0E;&#x5E94;&#x7528;&#x7684;GLKViewController&#x5B9E;&#x4F8B;&#x76F8;&#x5173;&#x8054;&#x7684;&#x89C6;&#x56FE;&#x3002;&#x4F7F;&#x7528;NSAssert()&#x51FD;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x65F6;&#x68C0;&#x67E5;&#x4F1A;&#x9A8C;&#x8BC1;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x4ECE;storyboard&#x52A0;&#x8F7D;&#x7684;&#x89C6;&#x56FE;&#x662F;&#x5426;&#x786E;&#x5B9E;&#x662F;&#x6B63;&#x786E;&#x7684;&#x7C7B;&#x578B;&#x3002;&#x5982;&#x679C;&#x9A8C;&#x8BC1;&#x7684;&#x6761;&#x4EF6;&#x4E3A;false,&#x90A3;&#x4E48;NSAssert()&#x4F1A;&#x5411;&#x8C03;&#x8BD5;&#x5668;&#x6216;iOS&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x53F0;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x3002;NSAssert()&#x8FD8;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A; &#x5982;&#x679C;&#x4E0D;&#x505A;&#x5904;&#x7406;&#x5C31;&#x505C;&#x6B62;&#x5E94;&#x7528;&#x7684;NSInternalInconsistencyException&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x65E0;&#x6CD5;&#x4ECE;&#x4E00;&#x4E2A;&#x52A0;&#x8F7D;&#x81EA;storyboard&#x7684;&#x9519;&#x8BEF;&#x89C6;&#x56FE;&#x8FD8;&#x539F;&#x5E94;&#x7528;&#x7684;&#x754C;&#x9762;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x76D1;&#x6D4B;&#x5230;&#x9519;&#x8BEF;&#x7684;&#x65F6;&#x5019;&#x6700;&#x597D;&#x5148;&#x505C;&#x6B62;&#x5E94;&#x7528;&#x3002;</p>
+<p>&#x5982;&#x5728;&#x7B2C;1&#x7AE0;&#x4ECB;&#x7ECD;&#x7684;&#xFF0C;OpenGL ES&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x4E0D;&#x4EC5;&#x4F1A;&#x4FDD;&#x5B58;OpenGL ES&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x8FD8;&#x4F1A;&#x63A7;&#x5236;GPU&#x53BB;&#x6267;&#x884C;&#x6E32;&#x67D3;&#x8FD0;&#x7B97;&#x3002;OpenGLES_Ch2_1ViewController&#x7684;-viewDidLoad&#x65B9;&#x6CD5;&#x4F1A;&#x5206;&#x914D;&#x5E76;&#x521D;&#x59CB;&#x5316;-&#x4E00;&#x4E2A;&#x5185;&#x5EFA;&#x7684;EAGLContext&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x4F1A;&#x5C01;&#x88C5;-&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x4E8E;&#x67D0;&#x4E2A;&#x5E73;&#x53F0;&#x7684;OpenGL ES&#x4E0A;&#x4E0B;&#x6587;&#x3002;&#x82F9;&#x679C;&#x8FD8;&#x6CA1;&#x6709;&#x8BF4;&#x660E;&#x5F00;&#x5934;&#x7684;EAGL&#x524D;&#x7F00;&#x4EE3;&#x8868;&#x4EC0;&#x4E48;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x53EF;&#x80FD;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x201C;Embedded Apple GL&#x201D;&#x3002;&#x82F9;&#x679C;iOS&#x4E2D;&#x7684;OpenGLES&#x6846;&#x67B6;&#x4E00;&#x822C;&#x662F;&#x4EE5;EAGL&#x4E3A;&#x524D;&#x7F00;&#x6765;&#x58F0;&#x660E;Objective-C&#x7C7B;&#x548C;&#x51FD;&#x6570;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x7684;OpenGLES&#x914D;&#x7F6E;&#x6216;&#x8005;&#x6E32;&#x67D3;&#x53D1;&#x751F;&#x4E4B;&#x524D;&#xFF0C;&#x5E94;&#x7528;&#x7684;GLKView&#x5B9E;&#x4F8B;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5C5E;&#x6027;&#x90FD;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;EAGLContext&#x5B9E;&#x4F8B;&#x65E2;&#x652F;&#x6301;OpenGLES1.1&#xFF0C;&#x53C8;&#x652F;&#x6301;OpenGL ES 2.0&#x3002;&#x672C;&#x4E66;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;&#x4F7F;&#x7528;&#x7684;&#x662F;2.0&#x7248;&#x672C;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x884C;&#x5728;&#x4E3A;&#x89C6;&#x56FE;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5C5E;&#x6027;&#x8D4B;&#x503C;&#x4E4B;&#x524D;&#xFF0C;&#x5206;&#x914D;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;EAGLContext&#x7684;&#x5B9E;&#x4F8B;,&#x5E76;&#x7528;&#x7C97;&#x4F53;&#x6807;&#x6CE8;&#x7684;&#x5E38;&#x91CF;&#x5C06;&#x5B83;&#x521D;&#x59CB;&#x5316;&#x4E3A;OpenGL ES 2.0&#x3002;</p>
+<pre><code class="lang-c">
+view.context = [[EAGLContext alloc]
+initWithAPI:kEAGLRenderingAPIOpenGLES2];
+
+<span class="hljs-comment">// Make the new context current</span>
+[EAGLContext setCurrentContext:view.context] ;
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x4E0A;&#x4E0B;&#x6587;&#x3002;EAGLContext &#x7684;&#x65B9;&#x6CD5;&#x201C;+setCurrentContext:&#x201D;&#x4F1A;&#x4E3A;&#x63A5;&#x4E0B;&#x6765;&#x7684;OpenGLES&#x8FD0;&#x7B97;&#x8BBE;&#x7F6E;&#x5C06;&#x4F1A;&#x7528;&#x5230;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x3002;&#x201C;+setCurrentContext:&#x201D;&#x65B9;&#x6CD5;&#x524D;&#x9762;&#x7684;&#x52A0;&#x53F7;&#x8868;&#x660E;&#x201C; +setCurrentContext:&quot;&#x662F;- &#x4E00;&#x4E2A;&#x7C7B;&#x65B9;&#x6CD5;&#x3002;&#x5728;Objective-C&#x4E2D;&#xFF0C;&#x7C7B;&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x5373;&#x4F7F;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x65F6;&#x4ECD;&#x7136;&#x53EF;&#x4EE5;&#x88AB;&#x7C7B;&#x81EA;&#x8EAB;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x82F9;&#x679C;&#x7684;OpenGLES.framework&#x4E3A;EAGLContext&#x7684;&#x201C;-initWithAPI:&#x201D; &#x65B9;&#x6CD5;&#x58F0;&#x660E;&#x4E86;&#x5E38;&#x91CF;kEAGLRenderingAPIOpenGLES2&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x5B58;&#x5728;&#x7740;&#x4E00;&#x4E2A;kEAGLRendering APIOpen-GLES1&#x5E38;&#x91CF;&#x3002;OpenGL ES 2.0&#x6807;&#x51C6;&#x4E0E;&#x4EE5;&#x524D;&#x7684;&#x7248;&#x672C;&#x6709;&#x5F88;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x3002;&#x5C24;&#x5176;&#x662F;OpenGL ES 2.0&#x7701;&#x7565;&#x4E86;&#x5F88;&#x591A;&#x7279;&#x6027;&#x548C;&#x5728;&#x4E0A;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5E94;&#x7528;&#x652F;&#x6301;&#x57FA;&#x7840;&#x7ED3;&#x6784;&#x3002;&#x4F5C;&#x4E3A;&#x66FF;&#x4EE3;&#xFF0C;OpenGLES2.0&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x53EF;&#x7F16;&#x7A0B;GPU&#x6982;&#x5FF5;&#x3002;&#x4E3A;&#x4E86;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x82F9;&#x679C;&#x5EFA;&#x8BAE;&#x6211;&#x4EEC;&#x5728;&#x65B0;&#x5E94;&#x7528;&#x4E2D;&#x4F7F;&#x7528;OpenGL ES 2.0&#x3002;&#x5728;&#x4ECB;&#x7ECD;&#x82F9;&#x679C;&#x7684;GLKit&#x4E4B;&#x524D;&#xFF0C;OpenGL ES 2.0&#x8FD8;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x524D;&#x671F;&#x5DE5;&#x4F5C;&#x4EE5;&#x7F16;&#x7A0B;GPU&#x5E76;&#x91CD;&#x65B0;&#x521B;&#x5EFA;&#x4E00;&#x4E9B;2.0&#x7248;&#x672C;&#x4E22;&#x5931;&#x7684;&#x3001;1.1 &#x7248;&#x672C;&#x9ED8;&#x8BA4;&#x5305;&#x542B;&#x7684;&#x4FBF;&#x5229;&#x529F;&#x80FD;&#x3002;GLKit&#x73B0;&#x5728;&#x66FF;&#x6362;&#x4E86;&#x5927;&#x90E8;&#x5206;OpenGL ES 1.1 &#x7684;&#x57FA;&#x7840;&#x7ED3;&#x6784;&#xFF0C;&#x540C;&#x65F6;&#x8BA9;OpenGL ES 2.0&#x4E0E;OpenGLES 1.1 &#x4F7F;&#x7528;&#x8D77;&#x6765;&#x4E00;&#x6837;&#x5BB9;&#x6613;&#x3002;</p>
+<p>-viewDidLoad&#x65B9;&#x6CD5;&#x63A5;&#x7740;&#x8BBE;&#x7F6E;OpenGLES_Ch2_1ViewController &#x7684;baseEffect&#x5C5E;&#x6027;&#x4E3A;
+&#x4E00;&#x4E2A;&#x65B0;&#x5206;&#x914D;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x7684;GLKBaseEffect&#x7C7B;&#x578B;&#x7684;&#x5B9E;&#x4F8B;&#xFF0C;&#x540C;&#x65F6;&#x8BBE;&#x7F6E;GLKBaseEffect&#x5B9E;&#x4F8B;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x4E3A;&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">// Create a base effect that provides standard OpenGL ES 2.0</span>
+<span class="hljs-comment">// Shading Language programs and set constants to be used for</span>
+<span class="hljs-comment">// all subsequent rendering</span>
+self.baseBffect = [[GLKBaseEffect alloc] init];
+self.baseEffect.useConstantColor = GL_TRUE;
+</code></pre>
+<p><code>GLKBaseEffect</code>&#x7C7B;&#x63D0;&#x4F9B;&#x4E86;&#x4E0D;&#x4F9D;&#x8D56;&#x4E8E;&#x6240;&#x4F7F;&#x7528;&#x7684;<code>OpenGL ES</code>&#x7248;&#x672C;&#x7684;&#x63A7;&#x5236;<code>OpenGLES</code>&#x6E32;&#x67D3;&#x7684;&#x65B9;&#x6CD5;&#x3002;<code>OpenGL ES 1.1</code>&#x8DDF;<code>OpenGL ES 2.0</code>&#x7684;&#x5185;&#x90E8;&#x5DE5;&#x4F5C;&#x673A;&#x5236;&#x662F;&#x975E;&#x5E38;&#x4E0D;&#x540C;&#x7684;&#x3002;2.0 &#x7248;&#x672C;&#x6267;&#x884C;&#x4E3A;GPU&#x4E13;&#x95E8;&#x5B9A;&#x5236;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;<code>GLKit</code>&#x548C;<code>GLKBaseEffect</code>&#x7C7B;&#xFF0C;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x4F8B;&#x5B50;&#x5C31;&#x9700;&#x8981;&#x7528;<code>OpenGLES2.0</code>&#x7684;&#x201C;ShadingLanguage&#x201D;&#x7F16;&#x5199;&#x4E00;&#x4E2A;&#x5C0F;&#x7684;GPU&#x7A0B;&#x5E8F;&#x3002;<code>GLKBaseEffect</code>&#x4F1A;&#x5728;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x5730;&#x6784;&#x5EFA;GPU&#x7A0B;&#x5E8F;&#x5E76;&#x6781;&#x5927;&#x5730;&#x7B80;&#x5316;&#x672C;&#x4E66;&#x4E2D;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x6E32;&#x67D3;&#x50CF;&#x7D20;&#x989C;&#x8272;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x5F88;&#x591A;&#x79CD;&#x3002;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x7684;GLKBaseEffect&#x5B9E;&#x4F8B;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6052;&#x5B9A;
+&#x4E0D;&#x53D8;&#x7684;&#x767D;&#x8272;&#x6765;&#x6E32;&#x67D3;&#x4E09;&#x89D2;&#x5F62;&#x3002;&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x5728;&#x4E09;&#x89D2;&#x5F62;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;-&#x4E2A;&#x50CF;&#x7D20;&#x90FD;&#x6709;&#x76F8;&#x540C;&#x7684;&#x989C;&#x8272;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x5728;<code>GLKit</code>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;4&#x4E2A;&#x989C;&#x8272;&#x5143;&#x7D20;&#x503C;&#x7684;C&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4F53;<code>GLK Vector4</code>&#x6765;
+&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x6052;&#x5B9A;&#x7684;&#x989C;&#x8272;:</p>
+<pre><code class="lang-c">self.baseEffect.constantColor = GLKVector4Make (
+    <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// Red</span>
+    <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// Green</span>
+    <span class="hljs-number">1.0f</span>, <span class="hljs-comment">// Blue</span>
+    <span class="hljs-number">1.0f</span>);<span class="hljs-comment">// Alpha</span>
+<span class="hljs-comment">//Set the background color stored in the current context</span>
+glClearColor(<span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">0.0f</span>, <span class="hljs-number">1.0f</span>); <span class="hljs-comment">//background color</span>
+</code></pre>
+<p>&#x524D;&#x4E09;&#x4E2A;&#x989C;&#x8272;&#x5143;&#x7D20;&#x662F;&#x7B2C;1&#x7AE0;&#x56FE;1-2&#x4E2D;&#x4ECB;&#x7ECD;&#x7684;&#x7EA2;&#x3001;&#x7EFF;&#x3001;&#x84DD;&#x3002;&#x7B2C;4&#x4E2A;&#x503C;&#x4E3A;&#x900F;&#x660E;&#x5EA6;&#xFF0C;&#x5B83;&#x51B3;&#x5B9A;&#x4E86;&#x50CF;&#x7D20;&#x662F;&#x534A;&#x900F;&#x660E;&#x8FD8;&#x662F;&#x4E0D;&#x900F;&#x660E;&#x3002;&#x900F;&#x660E;&#x5EA6;&#x5143;&#x7D20;&#x4F1A;&#x5728;&#x7B2C;3&#x7AE0;&#x505A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;&#x8BBE;&#x7F6E;&#x7EA2;&#x3001;&#x7EFF;&#x3001;&#x84DD;&#x4E3A;&#x6EE1;&#x503C;1.0&#xFF0C;&#x4EE5;&#x8BBE;&#x7F6E;&#x6210;&#x767D;&#x8272;&#x3002;&#x8BBE;&#x7F6E;&#x900F;&#x660E;&#x5EA6;&#x4E3A;&#x6EE1;&#x503C;&#x4EE5;&#x4F7F;&#x989C;&#x8272;&#x4E3A;&#x5B8C;&#x5168;&#x4E0D;&#x900F;&#x660E;&#x3002;&#x7EA2;&#x3001;&#x7EFF;&#x3001;&#x84DD;&#x548C;&#x900F;&#x660E;&#x5EA6;&#x503C;&#x7EDF;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;RGBA&#x989C;&#x8272;&#x3002;GLKVector4Make() &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x503C;&#x521D;&#x59CB;&#x5316;&#x7684;GLKit GLKVector4&#x7ED3;&#x6784;&#x4F53;&#x3002;</p>
+<p><code>glClearColor()</code>&#x51FD;&#x6570;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;OpenGL ES&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x201C; &#x6E05;&#x9664;&#x989C;&#x8272;&#x201D;&#x4E3A;&#x4E0D;&#x900F;&#x660E;&#x9ED1;&#x8272;&#x3002;&#x6E05;&#x9664;&#x989C;&#x8272;&#x7531;RGBA&#x989C;&#x8272;&#x5143;&#x7D20;&#x503C;&#x7EC4;&#x6210;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x5E27;&#x7F13;&#x5B58;&#x88AB;&#x6E05;&#x9664;&#x65F6;&#x521D;&#x59CB;&#x5316;&#x6BCF;&#x4E2A;&#x50CF;&#x7D20;&#x7684;&#x989C;&#x8272;&#x503C;&#x3002;</p>
+<p>&#x7B2C;1&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;&#x7528;&#x4E8E;&#x5728;CPU&#x63A7;&#x5236;&#x7684;&#x5185;&#x5B58;&#x548C;GPU&#x63A7;&#x5236;&#x7684;&#x5185;&#x5B58;&#x4E4B;&#x95F4;&#x4EA4;&#x6362;&#x6570;&#x636E;&#x7684;&#x7F13;&#x5B58;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x8981;&#x7ED8;&#x5236;&#x7684;&#x4E09;&#x89D2;&#x5F62;&#x7684;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x6570;&#x636E;&#x5FC5;&#x987B;&#x8981;&#x53D1;&#x9001;&#x5230;GPU&#x6765;&#x6E32;&#x67D3;&#x3002;&#x521B;&#x5EFA;&#x5E76;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x9876;&#x70B9;&#x6570;&#x636E;&#x7684;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x6570;&#x7EC4;&#x7F13;&#x5B58;&#x3002;&#x524D;3&#x4E2A;&#x6B65;&#x9AA4;&#x5982;&#x4E0B;:</p>
+<ol>
+<li>&#x4E3A;&#x7F13;&#x5B58;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x72EC;&#x4E00;&#x65E0;&#x4E8C;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;</li>
+<li>&#x4E3A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x8FD0;&#x7B97;&#x7ED1;&#x5B9A;&#x7F13;&#x5B58;&#x3002;</li>
+<li>&#x590D;&#x5236;&#x6570;&#x636E;&#x5230;&#x7F13;&#x5B58;&#x4E2D;&#x3002;</li>
+</ol>
+<p>&#x4E0B;&#x9762;&#x6765;&#x81EA;-viewDidLoad&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x7684;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x4E86;&#x524D;3&#x6B65;:</p>
+<pre><code class="lang-c"><span class="hljs-comment">//Generate, bind, and initialize contents of a buffer to be</span>
+<span class="hljs-comment">// stored in GPU memory</span>
+glGenBuffers(l, <span class="hljs-comment">// STEP 1</span>
+    &amp;vertexBufferID) ;
+glBindBuffer(GL_ ARRAY_ BUEFER, <span class="hljs-comment">// STEP 2</span>
+    vertexBuf ferID);
+
+glBufferData(<span class="hljs-comment">// STEP 3</span>
+    GL_ARRAY_BUFFER, <span class="hljs-comment">// Initialize buffer contents</span>
+    <span class="hljs-keyword">sizeof</span> (vertices), <span class="hljs-comment">// Number of bytes to copy</span>
+    vertices , <span class="hljs-comment">// Address of bytes to copy</span>
+    GL_ STATIC_ DRAW) ;<span class="hljs-comment">// Hint: cache in GPU memory</span>
+</code></pre>
+<p>&#x5728;&#x7B2C;1&#x6B65;&#x4E2D;&#xFF0C;glGenBuffers()&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8981;&#x751F;&#x6210;&#x7684;&#x7F13;&#x5B58;&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;,&#x6307;&#x5411;&#x751F;&#x6210;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x5185;&#x5B58;&#x4FDD;&#x5B58;&#x4F4D;&#x7F6E;&#x3002;&#x5728;&#x5F53;&#x524D;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;&#x88AB;&#x751F;&#x6210;&#xFF0C;&#x5E76;&#x4FDD;&#x5B58;&#x5728;vertexBufferID&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4E2D;&#x3002;</p>
+<p>&#x5728;&#x7B2C;2&#x6B65;&#x4E2D;&#xFF0C;glBindBuffer0&#x51FD;&#x6570;&#x7ED1;&#x5B9A;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x7F13;&#x5B58;&#x5230;&#x5F53;&#x524D;&#x7F13;&#x5B58;&#x3002;OpenGL ES&#x4FDD;&#x5B58;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7F13;&#x5B58;&#x6807;&#x8BC6;&#x7B26;&#x5230;&#x5F53;&#x524D;OpenGLES&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4E0D;&#x540C;&#x90E8;&#x4F4D;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5728;&#x4EFB;&#x610F;&#x65F6;&#x523B;&#x6BCF;&#x79CD;&#x7C7B;&#x578B;&#x53EA;&#x80FD;&#x7ED1;&#x5B9A;- . &#x4E2A;&#x7F13;&#x5B58;&#x3002;&#x5982;&#x679C;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x6570;&#x7EC4;&#x7F13;&#x5B58;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x5B83;&#x4EEC;&#x4E0D;&#x80FD;&#x90FD;&#x88AB;&#x7ED1;&#x5B9A;&#x3002;</p>
+<p>glBindBuffer()&#x7684;&#x7B2C;-&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x91CF;&#xFF0C;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8981;&#x7ED1;&#x5B9A;&#x54EA;--&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x7F13;&#x5B58;&#x3002;OpenGLES2.0&#x5BF9;&#x4E8E;glBindBuffer()&#x7684;&#x5B9E;&#x73B0;&#x53EA;&#x652F;&#x6301;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x7F13;&#x5B58;&#xFF0C;<code>GLARRAY_BUFFER</code>&#x548C;<code>GL_ELEMENT_ARRAY_BUFFER</code>&#x3002;<code>GL_ELEMENT_ARRAY_BUFFER</code>&#x5C06;&#x4F1A;&#x5728;&#x7B2C;6&#x7AE0;&#x8BE6;&#x7EC6;&#x89E3;&#x91CA;&#x3002;<code>GL_ARRAY_BUFFER</code>&#x7C7B;&#x578B;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x5C5E;&#x6027;&#x6570;&#x7EC4;&#xFF0C;&#x4F8B;&#x5982;&#x672C;&#x4F8B;&#x4E2D;&#x4E09;&#x89D2;&#x5F62;&#x9876;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x3002;glBindBuffer() &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8981;&#x7ED1;&#x5B9A;&#x7684;&#x7F13;&#x5B58;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;</p>
+<hr>
+<p><strong>&#x6CE8;&#x610F;</strong></p>
+<p>&#x7F13;&#x5B58;&#x6807;&#x8BC6;&#x7B26;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x578B;&#x3002;0&#x503C;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x7F13;&#x5B58;&#x3002;&#x7528;0&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8C03;&#x7528;glBindBuffer()&#x51FD;&#x6570;&#x6765;&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x8BDD;&#xFF0C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7C7B;&#x578B;&#x7684;&#x7F13;&#x5B58;&#x4F1A;&#x88AB;&#x7ED1;&#x5B9A;&#x3002;&#x7F13;&#x5B58;&#x6807;&#x8BC6;&#x7B26;&#x5728;OpenGL ES&#x6587;&#x6863;&#x4E2D;&#x53C8;&#x53EB;&#x505A;&#x201C;names&#x201D;&#x3002;</p>
+<hr>
+<p>&#x5728;&#x7B2C;3&#x6B65;&#x4E2D;&#xFF0C;glBufferData&#x51FD;&#x6570;&#x590D;&#x5236;&#x5E94;&#x7528;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x5230;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x9876;&#x70B9;&#x7F13;&#x5B58;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-c">
+glBufferData(<span class="hljs-comment">//STEP3.</span>
+    GL_ ARRAY_ BUFFER, <span class="hljs-comment">//Initialize buffer contents</span>
+    <span class="hljs-keyword">sizeof</span> (vertices), <span class="hljs-comment">//Number of bytes to copy</span>
+    vertices ,<span class="hljs-comment">// Address of bytes to copy</span>
+    GL_ STATIC_ DRAW) ;<span class="hljs-comment">//Hint: cache in GPU memory</span>
+</code></pre>
+<p>glBufferData()&#x7684;&#x7B2C;-&#x4E00;&#x4E2A;&#x53C2; &#x6570;&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8981;&#x66F4;&#x65B0;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x6240;&#x7ED1;&#x5B9A;&#x7684;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x7F13;&#x5B58;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x8981;&#x590D;&#x5236;&#x8FDB;&#x8FD9;&#x4E2A;&#x7F13;&#x5B58;&#x7684;&#x5B57;&#x8282;&#x7684;&#x6570;&#x91CF;&#x3002;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8981;&#x590D;&#x5236;&#x7684;&#x5B57;&#x8282;&#x7684;&#x5730;&#x5740;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x7B2C;4&#x4E2A;&#x53C2;&#x6570;&#x63D0;&#x793A;&#x4E86;&#x7F13;&#x5B58;&#x5728;&#x672A;&#x6765;&#x7684;&#x8FD0;&#x7B97;&#x4E2D;&#x53EF;&#x80FD;&#x5C06;&#x4F1A;&#x88AB;&#x600E;&#x6837;&#x4F7F;&#x7528;&#x3002;GL_STATIC_DRAW&#x63D0;&#x793A;&#x4F1A;&#x544A;&#x8BC9;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x9002;&#x5408;&#x590D;&#x5236;&#x5230;GPU&#x63A7;&#x5236;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x56E0;&#x4E3A;&#x5F88;&#x5C11;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;&#x8FD9;&#x4E2A;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;OpenGL ES&#x4F18;&#x5316;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x3002;&#x4F7F;&#x7528;<code>GL_DYNAMIC_DRAW</code>&#x4F5C;&#x4E3A;&#x63D0;&#x793A;&#x4F1A;&#x544A;&#x8BC9;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x7F13;&#x5B58;&#x5185;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x9891;&#x7E41;&#x6539;&#x53D8;&#xFF0C;&#x540C;&#x65F6;&#x63D0;&#x793A;OpenGLES&#x4EE5;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5904;&#x7406;&#x7F13;&#x5B58;&#x7684;&#x5B58;&#x50A8;&#x3002;</p>
+<h3 id="2--glkviewdrawinrect">2. <code>-glkView:drawInRect:</code></h3>
+<p>&#x6BCF;&#x5F53;&#x4E00;&#x4E2A;GLKView&#x5B9E;&#x4F8B;&#x9700;&#x8981;&#x88AB;&#x91CD;&#x7ED8;&#x65F6;&#xFF0C;&#x5B83;&#x90FD;&#x4F1A;&#x8BA9;&#x4FDD;&#x5B58;&#x5728;&#x89C6;&#x56FE;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x5C5E;&#x6027;&#x4E2D;&#x7684;OpenGL ES&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x6210;&#x4E3A;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x7684;&#x8BDD;&#xFF0C;GLKView&#x5B9E;&#x4F8B;&#x4F1A;&#x7ED1;&#x5B9A;&#x4E0E;&#x4E00;&#x4E2A;Core Animation&#x5C42;&#x5206;&#x4EAB;&#x7684;&#x5E27;&#x7F13;&#x5B58;&#xFF0C;&#x6267;&#x884C;&#x5176;&#x4ED6;&#x7684;&#x6807;&#x51C6;OpenGL ES&#x914D;&#x7F6E;&#xFF0C;&#x5E76;&#x53D1;&#x9001;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x6765;&#x8C03;&#x7528;<code>OpenGLES_Ch2_1ViewController</code> &#x7684;<code>-glkView:drawInRect:</code>&#x65B9;&#x6CD5;&#x3002;<code>-glkView:drawInRect:</code>&#x662F;GLKView&#x7C7B;&#x7684;&#x59D4;&#x6258;&#x65B9;&#x6CD5;&#x3002;&#x4F5C;&#x4E3A;GLKViewController&#x7684;&#x5B50;&#x7C7B;&#xFF0C;<code>OpenGLES_Ch2_1ViewController</code>&#x4F1A;&#x81EA;&#x52A8;&#x6210;&#x4E3A;&#x4ECE;storyboard&#x6587;&#x4EF6;&#x52A0;&#x8F7D;&#x7684;&#x5173;&#x8054;&#x89C6;&#x56FE;&#x7684;&#x59D4;&#x6258;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x59D4;&#x6258;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x544A;&#x8BC9;baseEffect&#x51C6;&#x5907;&#x597D;&#x5F53;&#x524D;OpenGLES&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E3A;&#x4F7F;&#x7528;baseEffect&#x751F;&#x6210;&#x7684;&#x5C5E;&#x6027;&#x548C;Shading Language&#x7A0B;&#x5E8F;&#x7684;&#x7ED8;&#x56FE;&#x505A;&#x597D;&#x51C6;&#x5907;&#x3002;&#x63A5;&#x7740;&#xFF0C;&#x8C03;&#x7528;OpenGLES&#x7684;glClear()&#x4E3D;&#x6570;&#x6765;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x7684;&#x5E27;&#x7F13;&#x5B58;&#x7684;&#x50CF;&#x7D20;&#x989C;&#x8272;&#x6E32;&#x67D3;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x7684;&#x989C;&#x8272;&#x4E3A;&#x524D;&#x9762;&#x4F7F;&#x7528;glClearColor()&#x51FD;&#x6570;&#x8BBE;&#x5B9A;&#x7684;&#x503C;&#x3002;&#x6B63;&#x5982;2.1&#x8282;&#x6240;&#x63CF;&#x8FF0;&#x7684;&#xFF0C;&#x5E27;&#x7F13;&#x5B58;&#x53EF;&#x80FD;&#x6709;&#x9664;&#x4E86;&#x50CF;&#x7D20;&#x989C;&#x8272;&#x6E32;&#x67D3;&#x7F13;&#x5B58;&#x4E4B;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x9644;&#x52A0;&#x7684;&#x7F13;&#x5B58;&#xFF0C;&#x5E76;&#x4E14;&#x5982;&#x679C;&#x5176;&#x4ED6;&#x7684;&#x7F13;&#x5B58;&#x88AB;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;glClear()&#x51FD;&#x6570;&#x4E2D;&#x6307;&#x5B9A;&#x4E0D;&#x540C;&#x7684;&#x53C2;&#x6570;&#x6765;&#x6E05;&#x9664;&#x3002;glClear()&#x51FD;&#x6570;&#x4F1A;&#x6709;&#x6548;&#x5730;&#x8BBE;&#x7F6E;&#x5E27;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x50CF;&#x7D20;&#x7684;&#x989C;&#x8272;&#x4E3A;&#x80CC;&#x666F;&#x8272;&#x3002;</p>
+<pre><code class="lang-c">- (<span class="hljs-keyword">void</span>)glkView: (GLKView *)view drawInRect: (CGRect )rect {
+
+    [self.baseEffect prepareToDraw];
+    glClear (GL_COLOR_BUFFER_BIT);
+    <span class="hljs-comment">// Enable use of currently bound vertex buffer</span>
+    glEnableVertexAttribArray(      <span class="hljs-comment">// STEP 4</span>
+        GLKVertexAttribPosition);
+
+    glVertexAttribPointer (         <span class="hljs-comment">//STEP 5</span>
+        GLKVertexAttribPosition,
+        <span class="hljs-number">3</span>,                          <span class="hljs-comment">//three components per vertex</span>
+        GL_FLOAT,                   <span class="hljs-comment">//data is floating point</span>
+        GL_ FALSE,                  <span class="hljs-comment">//no fixed point scaling</span>
+        <span class="hljs-keyword">sizeof</span>(SceneVertex),        <span class="hljs-comment">// no gaps in data</span>
+        <span class="hljs-literal">NULL</span>);                      <span class="hljs-comment">// NULL tells GPU to start at</span>
+                                    <span class="hljs-comment">// beginning of bound buffer</span>
+    <span class="hljs-comment">// Draw triangles using the first three vertices in the</span>
+    <span class="hljs-comment">// currently bound vertex buffer</span>
+    glDrawArrays (GL_ TRIANGLES , <span class="hljs-comment">//STEP 6</span>
+        <span class="hljs-number">0</span>, <span class="hljs-comment">// Start with first vertex in currently bound buffer</span>
+        <span class="hljs-number">3</span>); <span class="hljs-comment">// Use three vertices from currently bound buffer</span>
+</code></pre>
+<p>&#x5728;&#x5E27;&#x7F13;&#x5B58;&#x88AB;&#x6E05;&#x9664;&#x4EE5;&#x540E;&#xFF0C;&#x662F;&#x65F6;&#x5019;&#x7528;&#x5B58;&#x50A8;&#x5728;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x7684;OpenGLES&#x7684;GLARRAY_BUFFER&#x7C7B;&#x578B;&#x7684;&#x7F13;&#x5B58;&#x4E2D;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x7ED8;&#x5236;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x4E09;&#x89D2;&#x5F62;&#x4E86;&#x3002;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x7684;&#x524D;&#x4E09;&#x6B65;&#x5DF2;&#x7ECF;&#x5728;-viewDidLoad&#x65B9;&#x6CD5;&#x4E2D;&#x88AB;&#x6267;&#x884C;&#x4E86;&#x3002;&#x6B63;&#x5982;&#x7B2C;1&#x7AE0;&#x6240;&#x63CF;&#x8FF0;&#x7684;&#xFF0C;OpenGLES_Ch2_1ViewController&#x7684;&#x201C;glkView:drawInRect:&#x201D;&#x65B9;&#x6CD5;&#x4F1A;&#x6267;&#x884C;&#x5269;&#x4E0B;&#x7684;&#x51E0;&#x4E2A;&#x6B65;&#x9AA4;:</p>
+<ol>
+<li>&#x542F;&#x52A8;&#x3002;</li>
+<li>&#x8BBE;&#x7F6E;&#x6307;&#x9488;&#x3002;</li>
+<li>&#x7ED8;&#x56FE;&#x3002;</li>
+</ol>
+<p>&#x5728;&#x7B2C;4&#x6B65;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;glEnableVertexAttrib-Array()&#x6765;&#x542F;&#x52A8;&#x9876;&#x70B9;&#x7F13;&#x5B58;&#x6E32;&#x67D3;&#x64CD;&#x4F5C;&#x3002;OpenGLES&#x6240;&#x652F;&#x6301;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x64CD;&#x4F5C;&#x90FD;&#x53EF;&#x4EE5;&#x5355;&#x72EC;&#x5730;&#x4F7F;&#x7528;&#x4FDD;&#x5B58;&#x5728;&#x5F53;&#x524D;OpenGLES.&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x8BBE;&#x7F6E;&#x6765;&#x5F00;&#x542F;&#x6216;&#x5173;&#x95ED;&#x3002;</p>
+<p>&#x5728;&#x7B2C;5&#x6B65;&#x4E2D;&#xFF0C;glVertextAttribPointer() &#x51FD;&#x6570;&#x4F1A;&#x544A;&#x8BC9;OpenGL ES&#x9876;&#x70B9;&#x6570;&#x636E;&#x5728;&#x54EA;&#x91CC;&#xFF0C;&#x4EE5;&#x53CA;&#x600E;&#x4E48;&#x89E3;&#x91CA;&#x4E3A;&#x6BCF;&#x4E2A;&#x9876;&#x70B9;&#x4FDD;&#x5B58;&#x7684;&#x6570;&#x636E;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;glVertexAttribPointer() &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x6307;&#x793A;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x7684;&#x7F13;&#x5B58;&#x5305;&#x542B;&#x6BCF;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x6307;&#x793A;&#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x6709;3&#x4E2A;&#x90E8;&#x5206;&#x3002;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x544A;&#x8BC9;OpenGL ES&#x6BCF;&#x4E2A;&#x90E8;&#x5206;&#x90FD;&#x4FDD;&#x5B58;&#x4E3A;&#x4E00;&#x4E2A;&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x3002;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x544A;&#x8BC9;OpenGLES&#x5C0F;&#x6570;&#x70B9;&#x56FA;&#x5B9A;&#x6570;&#x636E;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x88AB;&#x6539;&#x53D8;&#x3002;&#x672C;&#x4E66;&#x4E2D;&#x6CA1;&#x6709;&#x4F8B;&#x5B50;&#x4F1A;&#x4F7F;&#x7528;&#x5C0F;&#x6570;&#x70B9;&#x56FA;&#x5B9A;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x503C;&#x662F;GL_FALSE&#x3002;</p>
+<hr>
+<p><strong>&#x6CE8;&#x610F;</strong></p>
+<p>&#x5C0F;&#x6570;&#x70B9;&#x56FA;&#x5B9A;&#x7C7B;&#x578B;&#x662F;OpenGL ES&#x652F;&#x6301;&#x7684;&#x5BF9;&#x4E8E;&#x6D6E;&#x70B9;&#x7C7B;&#x578B;&#x7684;&#x4E00;&#x79CD;&#x66FF;&#x4EE3;&#x3002;&#x5C0F;&#x6570;&#x70B9;&#x56FA;&#x5B9A;&#x7C7B;&#x578B;&#x7528;&#x727A;&#x7272;&#x7CBE;&#x5EA6;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x8282;&#x7701;&#x5185;&#x5B58;&#x3002;&#x6240;&#x6709;&#x73B0;&#x4EE3;GPU&#x90FD;&#x5BF9;&#x6D6E;&#x70B9;&#x6570;&#x7684;&#x4F7F;&#x7528;&#x505A;&#x4E86;&#x4F18;&#x5316;&#xFF0C;&#x5E76;&#x4E14;&#x5C0F;&#x6570;&#x70B9;&#x56FA;&#x5B9A;&#x6570;&#x636E;&#x5728;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x6D6E;&#x70B9;&#x6570;&#x3002;&#x56E0;&#x6B64;&#x575A;&#x6301;&#x4F7F;&#x7528;&#x6D6E;&#x70B9;&#x6570;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;GPU&#x7684;&#x8FD0;&#x7B97;&#x91CF;&#x5E76;&#x63D0;&#x9AD8;&#x7CBE;&#x5EA6;&#x3002;</p>
+<hr>
+<p>&#x7B2C;&#x4E94;&#x4E2A;&#x53C2;&#x6570;&#x53EB;&#x505A;&#x201C;&#x6B65;&#x5E45;&#x201D;&#xFF0C;&#x5B83;&#x6307;&#x5B9A;&#x4E86;&#x6BCF;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x4FDD;&#x5B58;&#x9700;&#x8981;&#x591A;&#x5C11;&#x4E2A;&#x5B57;&#x8282;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6B65;&#x5E45;&#x6307;&#x5B9A;&#x4E86;GPU&#x4ECE;-&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x5185;&#x5B58;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x5185;&#x5B58;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x9700;&#x8981;&#x8DF3;&#x8FC7;&#x591A;&#x5C11;&#x5B57;&#x8282;&#x3002;sizeof (GLKVector3)&#x6307;&#x793A;&#x5728;&#x7F13;&#x5B58;&#x4E2D;&#x6CA1;&#x6709;&#x989D;&#x5916;&#x7684;&#x5B57;&#x8282;&#xFF0C;&#x5373;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x6570;&#x636E;&#x662F;&#x5BC6;&#x5C01;&#x7684;&#x3002;&#x5728;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x7F13;&#x5B58;&#x4E2D;&#x4FDD;&#x5B58;&#x9664;&#x4E86;&#x6BCF;&#x4E2A;&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x7684;X&#x3001;Y&#x3001;Z&#x5750;&#x6807;&#x4E4B;&#x5916;&#x7684;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x4E5F;&#x662F;&#x53EF;&#x80FD;&#x7684;&#x3002;&#x56FE;2-8&#x4E2D;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x5185;&#x5B58;&#x6A21;&#x578B;&#x663E;&#x793A;&#x4E86;&#x9876;&#x70B9;&#x5B58;&#x50A8;&#x5668;&#x7684;&#x4E00;&#x4E9B;&#x9009;&#x9879;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x56FE;&#x663E;&#x793A;&#x7684;&#x662F;&#x6BCF;&#x4E2A;&#x9876;&#x70B9;&#x7684;3D&#x9876;&#x70B9;&#x4F4D;&#x7F6E;&#x5750;&#x6807;&#x90FD;&#x7D27;&#x5BC6;&#x5730;&#x4FDD;&#x5B58;&#x5728;12&#x5B57;&#x8282;&#x4E2D;&#xFF0C;&#x5C31;&#x50CF;OpenGLES_Ch2_1 &#x90A3;&#x4E2A;&#x4F8B;&#x5B50;&#x4E00;&#x6837;&#x3002;&#x7B2C;&#x4E8C;&#x4E2A;&#x56FE;&#x663E;&#x793A;&#x7684;&#x662F;&#x7528;&#x4E8E;&#x6BCF;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x5B58;&#x50A8;&#x7684;&#x989D;&#x5916;&#x5B57;&#x8282;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5728;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x4E0E;&#x4E0B;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x5750;&#x6807;&#x4E4B;&#x95F4;&#x6709;&#x7F3A;&#x53E3;&#x3002;</p>
+<div align="center">
+<img src="https://github.com/fangshufeng/gitments/blob/master/OpenGLES/chapter2/15626647071919.jpg?raw=true" width="600" height="400">
+<div>&#x56FE;&#x3000;2-8</div>
+</div> 
+
+
+<p>glVertexAttribPointer()&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;NULL,&#x8FD9;&#x544A;&#x8BC9;OpenGL ES&#x53EF;&#x4EE5;&#x4ECE;&#x5F53;&#x524D;&#x7ED1;&#x5B9A;&#x7684;&#x9876;&#x70B9;&#x7F13;&#x5B58;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x8BBF;&#x95EE;&#x9876;&#x70B9;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x5728;&#x7B2C;6&#x6B65;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x8C03;&#x7528;glDrawArrays()&#x6765;&#x6267;&#x884C;&#x7ED8;&#x56FE;&#x3002;glDrawArrays() &#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F1A;&#x544A;&#x8BC9;GPU&#x600E;&#x4E48;&#x5904;&#x7406;&#x5728;&#x7ED1;&#x5B9A;&#x7684;&#x9876;&#x70B9;&#x7F13;&#x5B58;&#x5185;&#x7684;&#x9876;&#x70B9;&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4F1A;&#x6307;&#x793A;OpenGLES&#x53BB;&#x6E32;&#x67D3;&#x4E09;&#x89D2;&#x5F62;&#x3002;glDrawArrays()&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x548C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x5206;&#x522B;&#x6307;&#x5B9A;&#x7F13;&#x5B58;&#x5185;&#x7684;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x9876;&#x70B9;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x9700;&#x8981;&#x6E32;&#x67D3;&#x7684;&#x9876;&#x70B9;&#x7684;&#x6570;&#x91CF;&#x3002;&#x81F3;&#x6B64;&#xFF0C;&#x5728;&#x56FE;2-3&#x4E2D;&#x663E;&#x793A;&#x7684;&#x573A;&#x666F;&#x5DF2;&#x7ECF;&#x88AB;&#x5B8C;&#x5168;&#x5730;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x6216;&#x8005;&#x81F3;&#x5C11;&#x5728;GPU&#x5904;&#x7406;&#x5B8C;&#x6210;&#x540E;&#x5B83;&#x5C31;&#x4F1A;&#x88AB;&#x5B8C;&#x5168;&#x5730;&#x6E32;&#x67D3;&#x51FA;&#x6765;&#x3002;&#x8BF7;&#x8BB0;&#x4F4F;GPU&#x8FD0;&#x7B97;&#x4E0E;CPU&#x8FD0;&#x7B97;&#x662F;&#x5F02;&#x6B65;&#x7684;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x8FD0;&#x884C;&#x5728;CPU&#x4E0A;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x9700;&#x8981;&#x8FDB;&#x4E00;:&#x6B65;&#x5904;&#x7406;&#x7684;&#x65F6;&#x5019;&#x5411;GPU&#x53D1;&#x9001;&#x547D;&#x4EE4;&#x3002;GPU&#x53EF;&#x80FD;&#x4E5F;&#x4F1A;&#x5904;&#x7406;&#x53D1;&#x9001;&#x81EA;iOS&#x7684;<code>Core Animation</code>&#x7684;&#x547D;
+&#x4EE4;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x4EFB;&#x4F55;&#x7ED9;&#x5B9A;&#x7684;&#x65F6;&#x523B;GPU&#x603B;&#x5171;&#x8981;&#x6267;&#x884C;&#x591A;&#x5C11;&#x5904;&#x7406;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x3002;</p>
+<h3 id="3--viewdidunload">3. <code>-viewDidUnload</code></h3>
+<p>OpenGLES_Ch2_1ViewController &#x5B9E;&#x73B0;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x662F;-viewDidUnload&#x65B9;&#x6CD5;&#x3002;&#x548C;-viewDidLoad&#x5728;&#x4E0E;&#x89C6;&#x56FE;&#x63A7;&#x5236;&#x5668;&#x76F8;&#x5173;&#x7684;&#x89C6;&#x56FE;&#x88AB;&#x52A0;&#x8F7D;&#x65F6;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x4E00;&#x6837;, -viewDidUnload&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x89C6;&#x56FE;&#x6700;&#x7EC8;&#x88AB;&#x5378;&#x8F7D;&#x65F6;&#x8C03;&#x7528;&#x3002;&#x5378;&#x8F7D;&#x7684;&#x89C6;&#x56FE;&#x5C06;&#x4E0D;&#x518D;&#x88AB;&#x7ED8;&#x5236;&#xFF0C;&#x56E0;&#x6B64;&#x4EFB;&#x4F55;&#x53EA;&#x662F;&#x5728;&#x7ED8;&#x5236;&#x65F6;&#x9700;&#x8981;&#x7684;OpenGLES&#x7F13;&#x5B58;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x5B89;&#x5168;&#x5730;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x7B2C;7&#x6B65;&#x662F;&#x5220;&#x9664;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x7684;&#x9876;&#x70B9;&#x7F13;&#x5B58;&#x548C;&#x4E0A;&#x4E0B;&#x6587;&#x3002;&#x8BBE;&#x7F6E;vertexBufferID&#x4E3A;0&#x907F;&#x514D;&#x4E86;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x7F13;&#x5B58;&#x88AB;&#x5220;&#x9664;&#x4EE5;&#x540E;&#x8FD8;&#x4F7F;&#x7528;&#x5176;&#x65E0;&#x6548;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#x3002;&#x8BBE;&#x7F6E;&#x89C6;&#x56FE;&#x7684;&#xFF0C;&#x4E0A;&#x4E0B;&#x6587;&#x5C5E;&#x6027;&#x4E3A;nil&#x5E76;&#x8BBE;&#x7F6E;&#x5F53;&#x524D;
+&#x4E0A;&#x4E0B;&#x6587;&#x4E3A;nil, &#x4EE5;&#x4FBF;&#x8BA9;Cocoa Touch&#x6536;&#x56DE;&#x6240;&#x6709;&#x4E0A;&#x4E0B;&#x6587;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x548C;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#x3002;</p>
+<pre><code class="lang-c">- (<span class="hljs-keyword">void</span> )viewDidUnload {
+    [super viewDidUnload];
+    <span class="hljs-comment">//Make the view&apos;s context current</span>
+    GLKView *view = (GLKView *)self.view;
+    [EAGLContext setCur rentContext:view.context];
+
+<span class="hljs-comment">// Delete buffers that aren&apos;t needed when view is unloaded</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> != vertexBufferID) {
+        glDeleteBuffers (<span class="hljs-number">1</span>, <span class="hljs-comment">//STEP 7</span>
+                        &amp;vertexBufferID);
+            vertexBufferID = <span class="hljs-number">0</span>;
+        )
+
+<span class="hljs-comment">//Stop using the context created in -viewDidLoad</span>
+    ((GLKView *)self.view).context = nil;
+    [EAGLContext setCurrentContext:nil];
+}
+</code></pre>
+<h2 id="235&#x3001;&#x652F;&#x6301;&#x6587;&#x4EF6;">2.3.5&#x3001;&#x652F;&#x6301;&#x6587;&#x4EF6;</h2>
+<p>&#x5728;&#x56FE;2-6&#x4E2D;&#x663E;&#x793A;&#x7684;&#x7EC4;&#x5185;&#x7684;png&#x6587;&#x4EF6;&#x662F;OpenGLESCh2_1&#x5E94;&#x7528;&#x7684;&#x56FE;&#x6807;&#x3002;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4F1A;&#x6839;&#x636E;&#x5E94;&#x7528;&#x6240;&#x8FD0;&#x884C;&#x7684;&#x8BBE;&#x5907;&#x662F;iPhone&#x3001;iPodTouch&#x8FD8;&#x662F;iPad&#x800C;&#x81EA;&#x52A8;&#x5730;&#x9009;&#x62E9;&#x6B63;&#x786E;&#x7684;&#x56FE;&#x6807;&#x3002;
+<code>OpenGL_ES_for_iOS_72x72.png</code> &#x6587;&#x4EF6;&#x5305;&#x542B;iPad&#x8981;&#x7528;&#x5230;&#x7684;&#x56FE;&#x6807;&#x56FE;&#x50CF;&#x3002;<code>OpenGL_ES_for_iOS_114x114.png</code> &#x548C;<code>OpenGL_ES_for_iOS_57x57.png</code> &#x5305;&#x542B;iPod Touch&#x548C;iPhone&#x8981;&#x7528;&#x5230;&#x7684;&#x56FE;&#x6807;&#x56FE;&#x50CF;&#x3002;&#x6269;&#x5C55;&#x540D;.png&#x4EE3;&#x8868;Portable Network Graphics (PNG)&#x3002;iOS&#x8BBE;&#x5907;&#x539F;&#x751F;&#x652F;&#x6301;
+PNG&#x6587;&#x4EF6;&#x5E76;&#x4E14;&#x4F1A;&#x6309;&#x7167;&#x56FD;&#x9645;&#x6807;&#x51C6;&#x5316;&#x7EC4;&#x7EC7;&#x7684;&#x6807;&#x51C6;&#x5B58;&#x50A8;&#x56FE;&#x50CF;&#x3002;</p>
+<p><code>OpenGLES_Ch2_1-Info.plist</code>&#x6587;&#x4EF6;&#x662F;&#x5728;&#x65B0;&#x5DE5;&#x7A0B;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x7531;Xcode&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x3002;<code>OpenGLES_Ch2_1-Info.plist</code> &#x4FDD;&#x5B58;&#x8BF8;&#x5982;&#x5E94;&#x7528;&#x7684;&#x7248;&#x672C;&#x53F7;&#x3001;&#x4F7F;&#x7528;&#x7684;storyboard&#x6587;&#x4EF6;&#x7684;&#x540D;&#x5B57;&#x3001;&#x56FE;&#x6807;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x5B57;&#x7B49;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;&#x6DFB;&#x52A0;&#x5E94;&#x7528;&#x7279;&#x6709;&#x7684;&#x4FE1;&#x606F;&#x5230;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x662F;&#x53EF;&#x80FD;&#x7684;&#xFF0C;&#x4F46;&#x662F;<code>OpenGLES_Ch2_1</code>&#x5E94;&#x7528;&#x4E0D;&#x9700;&#x8981;&#x4EFB;&#x4F55;&#x975E;&#x6807;&#x51C6;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53EA;&#x4F1A;&#x5728;&#x5E94;&#x7528;&#x6BCF;&#x6B21;&#x542F;&#x52A8;&#x7684;&#x65F6;&#x5019;&#x7531;&#x5E94;&#x7528;&#x8BFB;&#x53D6;
+&#x4E00;&#x6B21;&#x3002;</p>
+<p>InfoPlist.strings&#x6587;&#x4EF6;&#x662F;&#x5728;&#x65B0;&#x5DE5;&#x7A0B;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x7531;Xcode&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x3002;InfoPlist.strings&#x6587;&#x4EF6;&#x5305;&#x542B;&#x5728;<code>OpenGLES_Ch2_1-Info.plist</code> &#x6587;&#x4EF6;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x672C;&#x5730;&#x5316;&#x7248;&#x672C;&#x3002;&#x672C;&#x5730;&#x5316;&#x662F;&#x6307;&#x4E3A;&#x4E0D;&#x540C;&#x7684;&#x8BED;&#x8A00;&#x548C;&#x6587;&#x5316;&#x56E2;&#x4F53;&#x63D0;&#x4F9B;&#x4E13;&#x95E8;&#x7684;&#x6587;&#x672C;&#x548C;&#x56FE;&#x50CF;&#x3002;InfoPlist.strings &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x6839;&#x636E;&#x7528;&#x6237;&#x7684;&#x5730;&#x533A;&#x4E3A;&#x76F8;&#x540C;&#x7684;&#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x4E0D;&#x540C;&#x7684;&#x56FE;&#x6807;&#x548C;&#x7528;&#x6237;&#x754C;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h3 id="1main&#x51FD;&#x6570;">1.main&#x51FD;&#x6570;</h3>
+<p>main.m&#x6587;&#x4EF6;&#x662F;&#x5DE5;&#x7A0B;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x7531;Xcode&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x5E76;&#x4E14;&#x5305;&#x542B;&#x5E94;&#x7528;&#x7684;main()&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x73B0;&#x3002;main()&#x51FD;&#x6570;&#x88AB;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6765;&#x5F00;&#x542F;ANSI C&#x3001;C++ &#x548C;Objective-C&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x3002;&#x751F;&#x6210;&#x7684;main.m&#x6587;&#x4EF6;&#x5305;&#x542B;&#x5982;&#x4E0B;&#x4EE3;&#x7801;:</p>
+<pre><code class="lang-c"><span class="hljs-comment">//</span>
+<span class="hljs-comment">// main .m</span>
+<span class="hljs-comment">// OpenGLES_ _Ch2_ 1</span>
+<span class="hljs-comment">//</span>
+
+<span class="hljs-meta">#import &lt;UIKit/UIKit.h&gt;</span>
+<span class="hljs-meta">#import <span class="hljs-string">&quot;OpenGLBS_Ch2_1AppDelegate.h&quot;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> *argv[])</span> </span>{
+    @autoreleasepool {
+    <span class="hljs-keyword">return</span> UIApplicationMain(argc, argv,nil,NSStringFromClass([OpenGLES_Ch2_1AppDelegate <span class="hljs-keyword">class</span>]));
+}
+}
+</code></pre>
+<p>main()&#x51FD;&#x6570;&#x4F7F;&#x7528;Objective-C&#x7684;@autoreleasepool&#x5173;&#x952E;&#x5B57;&#x6765;&#x5F00;&#x542F;&#x81EA;&#x52A8;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x65E5;(Automatic Reference Counting)&#x3002;main() &#x51FD;&#x6570;&#x8FD8;&#x4F1A;&#x8C03;UIApplicationMain()&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x521B;&#x5EFA;&#x4E86;&#x5305;&#x542B;UIApplication&#x5B9E;&#x4F8B;&#x5728;&#x5185;&#x7684;&#x5E94;&#x7528;&#x7684;&#x5173;&#x952E;&#x5BF9;&#x8C61;&#xFF0C;&#x540C;&#x65F6;&#x5F00;&#x59CB;&#x5904;&#x7406;&#x7528;&#x6237;&#x4E8B;&#x4EF6;&#x3002;NSStringFromClass([OpenGLES_Ch2_AppDelegate class])&#x8868;&#x8FBE;&#x5F0F;&#x6307;&#x5B9A;&#x4E86;&#x4E0E;&#x65B0;&#x521B;&#x5EFA;&#x7684;UIApplication&#x5B9E;&#x4F8B;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#x5E94;&#x7528;&#x59D4;&#x6258;&#x7C7B;&#x7684;&#x540D;&#x5B57;&#x3002;UIApplication &#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x5145;&#x6EE1;&#x6574;&#x4E2A;&#x663E;&#x793A;&#x5C4F;&#x7684;UIWindow,&#x540C;&#x65F6;&#x52A0;&#x8F7D;&#x4E86;-&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;storyboard&#x6587;&#x4EF6;&#x6765;&#x6784;&#x5EFA;&#x5E94;&#x7528;&#x7684;&#x7528;&#x6237;&#x754C;&#x9762;&#x3002;UIApplicationMain()&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x5E72;&#x6D89;UIApplication &#x7684;&#x6267;&#x884C;&#xFF0C;&#x76F4;&#x5230;&#x5E94;&#x7528;&#x9000;&#x51FA;&#x624D;&#x4F1A;&#x8FD4;&#x56DE;&#x3002;</p>
+<h3 id="2&#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;">2.&#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;</h3>
+<p>OpenGLES_Ch2_1-Prefix.pch &#x6587;&#x4EF6;&#x662F;&#x7531;Xcode&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x5E76;&#x4E14;&#x6539;&#x5584;&#x4E86;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#x5E94;&#x7528;&#x7684;&#x7F16;&#x8BD1;&#x901F;&#x5EA6;&#x3002;&#x6269;&#x5C55;&#x540D;.pch&#x4EE3;&#x8868;&#x9884;&#x7F16;&#x8BD1;&#x5934;&#x6587;&#x4EF6;(pre-compiled header)&#x3002;</p>
+<h3 id="3-framework&#x548C;product">3. Framework&#x548C;Product</h3>
+<p>Frameworks&#x662F;iOs&#x5E94;&#x7528;&#x7528;&#x5230;&#x7684;&#x7CFB;&#x7EDF;&#x5E93;&#x548C;&#x8D44;&#x6E90;&#x3002;&#x5728;Xcode&#x6587;&#x4EF6;&#x5217;&#x8868;&#x4E2D;&#x7684;Frameworks&#x6587;&#x4EF6;&#x5939;&#x6307;&#x5B9A;&#x4E86;&#x5E94;&#x7528;&#x4F7F;&#x7528;&#x4E86;&#x54EA;&#x4E9B;&#x6846;&#x67B6;&#x3002;OpenGLES_Ch2_1 &#x4F8B;&#x5B50;&#x4F7F;&#x7528;&#x4E86;<code>OpenGLES.framework</code>&#x3001;<code>QuartzCore.framework</code>&#x3001;<code>GLKit.framework</code>&#x3001; <code>UIKit.framework</code>&#x3001;<code>Foundation.framework</code>&#x548C;
+<code>CoreGraphics.framework</code>&#x3002;</p>
+<p>Products&#x6587;&#x4EF6;&#x5939;&#x5305;&#x542B;&#x7F16;&#x8BD1;Xcode&#x5DE5;&#x7A0B;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x5E94;&#x7528;&#x65F6;&#x4EA7;&#x751F;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="section2.2.html" class="navigation navigation-prev " aria-label="Previous page: 2.2、结合Cocoa Touch和OpenGL ES ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="section2.4.html" class="navigation navigation-next " aria-label="Next page: 2.4、深入探讨GLKView是怎么工作的 ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.3、OpenGLES_Ch2_1示例 ","level":"1.3.3","depth":2,"next":{"title":"2.4、深入探讨GLKView是怎么工作的 ","level":"1.3.4","depth":2,"path":"chapter2/section2.4.md","ref":"chapter2/section2.4.md","articles":[]},"previous":{"title":"2.2、结合Cocoa Touch和OpenGL ES ","level":"1.3.2","depth":2,"path":"chapter2/section2.2.md","ref":"chapter2/section2.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter2/section2.3.md","mtime":"2019-07-11T14:00:01.086Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-15T13:12:13.663Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
