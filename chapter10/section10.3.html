@@ -1188,7 +1188,282 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="103&#x3001;opengl-es&#x6444;&#x50CF;&#x673A;">10.3&#x3001;OpenGL ES&#x6444;&#x50CF;&#x673A;</h1>
+<p>&#x89C6;&#x5E73;&#x622A;&#x4F53;&#x5B9A;&#x4E49;&#x4E86;&#x5728;5.6&#x8282;&#x8BB2;&#x89E3;&#x8FC7;&#x7684;&#xFF0C;&#x5E76;&#x5728;&#x7B2C;9&#x7AE0;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;&#x7684;&#x201C;&#x89C6;&#x70B9;&#x201D;&#x3002; &#x5F88;&#x591A;3D&#x5E94;&#x7528;&#x4F1A;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x6BD4;&#x55BB;&#x7684;&#x2018;&#x6444;&#x50CF;&#x673A;&#x201D;&#xFF0C; &#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x201C; &#x6444;&#x50CF;&#x673A;&#x201D;&#x6765;&#x67E5;&#x770B;&#x573A;&#x666F;&#x3002;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x7684;&#x6444;&#x50CF;&#x673A;&#x5728;&#x865A;&#x62DF;&#x7A7A;&#x95F4;&#x4E2D;&#x79FB;&#x52A8;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5E73;&#x622A;&#x4F53;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;&#x5F53;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0E;&#x6444;&#x50CF;&#x673A;&#x7684;&#x4F4D;&#x7F6E;&#x3001;&#x65B9;&#x5411;&#x548C;&#x89C6;&#x91CE;&#x5BF9;&#x5E94;&#x7684;&#x5E73;&#x622A;&#x4F53;&#x53EF;&#x4EE5;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x3002;
+&#x6444;&#x50CF;&#x673A;&#x662F;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x89C6;&#x70B9;&#x7684;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x6709;&#x7528;&#x7684;&#x6BD4;&#x55BB;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6BD4;&#x55BB;&#x4FBF;&#x4E8E;&#x521B;&#x5EFA;&#x7C7B;&#x4F3C;&#x4E0B;&#x9762;&#x7684;&#x5728;OpenGLES_Ch10_1&#x4E2D;&#x7684;UtilityCamera&#x7C7B;&#x7684;&#x7C7B;&#x3002;UtilityCamera &#x7C7B;&#x6709;&#x7C7B;&#x4F3C;&#x201C;-(void)setPosition:(GLK Vector3 )aPosition lookAtPosition:(GLKVector3)lookAtPosition&#x201D;&#x548C; &#x201C; -(void)moveBy:(GLKVector3) aVector&#x201D;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6BD4;&#x76F4;&#x63A5;&#x5904;&#x7406;&#x5E73;&#x622A;&#x4F53;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x66F4;&#x719F;&#x6089;&#x548C;&#x76F4;&#x89C2;&#x7684;&#x52A8;&#x4F5C;&#x548C;&#x672F;&#x8BED;&#x5728;&#x865A;&#x62DF;&#x4E16;&#x754C;&#x4E2D;&#x79FB;&#x52A8;&#x6444;&#x50CF;&#x673A;&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x6D3B;&#x52A8;&#x89C6;&#x70B9;&#x3002;</p>
+<pre><code>//
+//  UtilityOpenGLCamera.h
+//  
+//
 
+#include &lt;GLKit/GLKit.h&gt;
+#import &quot;AGLKFrustum.h&quot;
+
+@class UtilityCamera; 
+
+@protocol UtilityOpenGLCameraDelegate &lt;NSObject&gt;
+
+/////////////////////////////////////////////////////////////////
+// Returning NO prevents changes.
+@optional
+- (BOOL)camera:(UtilityCamera *)aCamera
+   willChangeEyePosition:(GLKVector3 *)eyePositionPtr
+   lookAtPosition:(GLKVector3 *)lookAtPositionPtr;
+
+@end
+
+
+@interface UtilityCamera : NSObject
+
+@property (nonatomic, assign, readwrite) 
+   __unsafe_unretained IBOutlet id delegate;
+@property(assign, nonatomic, readonly) 
+   GLKMatrix4 projectionMatrix;
+@property(assign, nonatomic, readonly) 
+   GLKMatrix4 modelviewMatrix;
+@property(assign, nonatomic, readonly) 
+   GLKVector3 position;
+@property(assign, nonatomic, readonly) 
+   GLKVector3 lookAtPosition;
+@property(assign, nonatomic, readonly) 
+   GLKVector3 upUnitVector;
+@property(nonatomic, readonly) 
+   const AGLKFrustum *frustumForCulling;
+
+- (void)configurePerspectiveFieldOfViewRad:(GLfloat)angle
+   aspectRatio:(GLfloat)anAspectRatio
+   near:(GLfloat)nearLimit
+   far:(GLfloat)farLimit;
+
+- (void)rotateAngleRadiansAboutY:(GLfloat)anAngleRadians;
+- (void)rotateAngleRadiansAboutX:(GLfloat)anAngleRadians;
+
+- (void)moveBy:(GLKVector3)aVector;
+- (void)moveTo:(GLKVector3)aVector;
+
+- (void)setPosition:(GLKVector3)aPosition 
+   lookAtPosition:(GLKVector3)lookAtPosition;
+- (void)setOrientation:(GLKMatrix4)aMatrix;
+
+@end
+</code></pre><p>UtilityCamera&#x7C7B;&#x91CD;&#x7528;&#x5E76;&#x5C01;&#x88C5;&#x4E86;&#x5728;&#x7B2C;9&#x7AE0;&#x4ECB;&#x7ECD;&#x7684;AGlKFrustum&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;Utility-Camera&#x7684;projectionMatrix&#x548C;modelviewMatrix&#x5C5E;&#x6027;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E0E;&#x6444;&#x50CF;&#x673A;&#x7684;&#x4F4D;&#x7F6E;&#x3001;&#x65B9;&#x5411;&#x548C;&#x89C6;&#x91CE;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x5E73;&#x622A;&#x4F53;&#x8BA1;&#x7B97;&#x51FA;&#x6765;&#x7684;&#x3002;
+&#x6240;&#x6709;&#x7684;&#x7528;&#x4E8E;&#x6539;&#x53D8;&#x5E73;&#x622A;&#x4F53;&#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x65B9;&#x5411;&#x7684;UtilityCamera&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x8C03;&#x7528;UtilityCamera&#x7684;&#x201C;-setPosition:lookAtPosition:&quot; &#x65B9;&#x6CD5;&#xFF0C;&#x7136;&#x540E;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8F6C;&#x800C;&#x5411;&#x6444;&#x50CF;&#x673A;&#x7684;&#x59D4;&#x6258;&#x53D1;&#x9001;&#x201C;(BOOL)camera:(UtilityCamera <em> )aCamera willChangeEyePosition:(GLKVector3 </em>)eyePositionPtrlookAtPosition:(GLKVector3 *)lookAtPositionPtr&quot; &#x6D88;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x59D4;&#x6258;&#x4F1A;&#x6267;&#x884C;&#x989D;&#x5916;&#x7684;&#x5904;&#x7406;&#x4EE5;&#x63A7;&#x5236;&#x8981;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x3002;&#x8FD9;&#x4E2A;&#x59D4;&#x6258;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;NO&#x6765;&#x963B;&#x6B62;&#x6444;&#x50CF;&#x673A;&#x4F4D;&#x7F6E;&#x7684;&#x53D8;&#x5316;&#x3002;</p>
+<hr>
+<p>&#x6CE8;&#x610F;</p>
+<p>&#x59D4;&#x6258;&#x662F; Cocoa Touch&#x7684;&#x4E00;&#x822C;&#x6A21;&#x5F0F;&#x3002;&#x59D4;&#x6258;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x5F71;&#x54CD;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x884C;&#x4E3A;&#x7684;&#x673A;&#x4F1A;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x57FA;&#x672C;&#x6982;&#x5FF5;&#x662F;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x534F;&#x8C03;&#x89E3;&#x51B3;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#x975E;&#x5E38;&#x7EFC;&#x5408;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x9002;&#x5408;&#x5728;&#x5404;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x91CD;&#x7528;&#x3002;&#x5B83;&#x4F1A;&#x5B58;&#x50A8;&#x5BF9;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x5373;&#x5B83;&#x7684;&#x59D4;&#x6258;&#xFF0C;&#x5E76;&#x4F1A;&#x5728;
+&#x5173;&#x952E;&#x65F6;&#x523B;&#x5411;&#x5B83;&#x7684;&#x59D4;&#x6258;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x7ED9;&#x4E88;&#x4E86;&#x8FD9;&#x4E2A;&#x59D4;&#x6258;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x989D;&#x5916;&#x5904;&#x7406;&#x6216;&#x8005;&#x63A7;&#x5236;&#x8981;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x7684;&#x673A;&#x4F1A;&#x3002;&#x5E94;&#x8BE5;&#x5728;&#x59D4;&#x6258;&#x4E2D;&#x5B9E;&#x73B0;&#x7279;&#x5B9A;&#x4E8E;&#x5E94;&#x7528;&#x7684;&#x89C4;&#x5219;&#x548C;&#x903B;&#x8F91;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4FEE;&#x6539;&#x6216;&#x8005;&#x5B50;&#x7C7B;&#x5316;&#x66F4;&#x901A;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<hr>
+<p>&#x4F8B;&#x5B50;OpenGLES_Ch10_1&#x4F1A;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5E94;&#x7528;&#x7684;OpenGLES_Ch10_1ViewController &#x5B9E;
+&#x4F8B;&#x4F5C;&#x4E3A;&#x6444;&#x50CF;&#x673A;&#x7684;&#x59D4;&#x6258;&#x3002;OpenGLES_Ch10_1ViewController &#x5B9E;&#x73B0;&#x4E86;&#x201C;. camera:willChangeEyePosition:lookAtPosition:&#x201D;&#x65B9;&#x6CD5;&#x6765;&#x9632;&#x6B62;&#x6444;&#x50CF;&#x673A;&#x7684;&#x4F4D;&#x7F6E;&#x4F4E;&#x4E8E;&#x5728;&#x6444;&#x50CF;&#x673A;&#x4F4D;&#x7F6E;&#x5904;&#x7684;&#x5730;&#x5F62;&#x9AD8;&#x5EA6;&#x3002;
+&#x8FD9;&#x4E2A;&#x59D4;&#x6258;&#x7684;&#x66F4;&#x7CBE;&#x5BC6;&#x5B9E;&#x73B0;&#x8FD8;&#x80FD;&#x9632;&#x6B62;&#x6444;&#x50CF;&#x673A;&#x4E0E;&#x5176;&#x4ED6;&#x6A21;&#x578B;&#x78B0;&#x649E;,&#x6216;&#x8005;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x7684;&#x91CD;&#x529B;&#x4EE5;&#x8BA9;&#x6444;&#x50CF;&#x673A;&#x6ED1;&#x4E0B;&#x5730;&#x5F62;&#x5185;&#x7684;&#x4E18;&#x9675;&#x3002;
+&#x4E0B;&#x9762;&#x7684;UtilityCamera&#x7C7B;&#x7684;&#x90E8;&#x5206;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x89E3;&#x91CA;&#x4E86;&#x8FD9;&#x4E2A;&#x7C7B;&#x662F;&#x600E;&#x4E48;&#x7BA1;&#x7406;&#x89C6;&#x5E73;&#x622A;&#x4F53;&#x4EE5;&#x53CA;&#x600E;&#x4E48;&#x4E0E;&#x4E00;&#x4E2A;&#x59D4;&#x6258;&#x5BF9;&#x8C61;&#x901A;&#x4FE1;&#x7684;&#x3002;&#x8981;&#x83B7;&#x5F97;&#x5B8C;&#x6574;&#x5B9E;&#x73B0;&#xFF0C;&#x8BF7;&#x8BBF;&#x95EE;: <a href="http://opengles.cosmicthump.com/" target="_blank">http://opengles.cosmicthump.com/</a>
+learning-opengl-es-sample-code/</p>
+<pre><code>///
+//  UtilityOpenGLCamera.m
+//  
+//
+
+#import &quot;UtilityCamera.h&quot;
+#import &quot;AGLKFrustum.h&quot;
+
+
+@interface UtilityCamera ()
+{
+   AGLKFrustum frustum;
+}
+
+@property(assign, nonatomic, readwrite) 
+   BOOL isInCallback;
+
+@end
+
+
+/////////////////////////////////////////////////////////////////
+// Instances of this class encapsulate a viewing frustum and 
+// enable point-of-view animation using the metaphor of a 
+// camera.
+@implementation UtilityCamera
+
+@synthesize delegate = delegate_;
+@synthesize isInCallback = isInCallback_;
+
+
+/////////////////////////////////////////////////////////////////
+// Initialize the receiver with a default frustum 
+- (id)init
+{
+   self = [super init];
+   if(nil != self)
+   {
+      // Default 45 deg. field of view, square aspect ratio,
+      // near distance of 0.5, and far distance of 5000
+      frustum = AGLKFrustumMakeFrustumWithParameters(
+         GLKMathDegreesToRadians(45.0f), 
+         1.0f, 
+         0.5f, 
+         5000.0f);
+      // Default eye at origin, look down neg. Z axis, 
+      // Y axis is &#x201C;up&#x201D;
+      AGLKFrustumSetPositionAndDirection(
+         &amp;frustum, 
+         GLKVector3Make(0.0f, 0.0f, 0.0f), 
+         GLKVector3Make(0.0f, 0.0f, -1.0f), 
+         GLKVector3Make(0.0f, 1.0f, 0.0f)); 
+   }
+
+   return self;
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Set the receiver&#x2019;s frustum shape
+- (void)configurePerspectiveFieldOfViewRad:(GLfloat)angle
+   aspectRatio:(GLfloat)anAspectRatio
+   near:(GLfloat)nearLimit
+   far:(GLfloat)farLimit;
+{   
+   AGLKFrustumSetPerspective(
+      &amp;frustum,
+      angle, 
+      anAspectRatio, 
+      nearLimit, 
+      farLimit);
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Return the frustum to be used when culling objects that
+// can&apos;t be seen by the camera at it&apos;s current position and
+// orientation.
+- (const AGLKFrustum *)frustumForCulling
+{
+   return &amp;frustum;
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Return the receiver&#x2019;s &#x201C;up&#x201D; direction
+- (GLKVector3)upUnitVector;
+{
+   return frustum.yUnitVector;
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Return the receiver&#x2019;s eye position
+- (GLKVector3)position
+{
+   return frustum.eyePosition;
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Return&#x2019;s the receiver&#x2019;s look-at position
+- (GLKVector3)lookAtPosition
+{
+   const GLKVector3 eyePosition = frustum.eyePosition;
+   const GLKVector3 lookAtPosition = GLKVector3Add(
+      eyePosition, frustum.zUnitVector);
+
+   return lookAtPosition;
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Set the receiver&#x2019;s eye and look-at positions and give optional
+// delegate object opportunity to revise or constrain the 
+// specified positions.
+- (void)setPosition:(GLKVector3)aPosition 
+   lookAtPosition:(GLKVector3)lookAtPosition;
+{
+   if(!self.isInCallback)
+   {  // Prevent recursive call to -setPosition:lookAtPosition:
+      self.isInCallback = YES;
+
+      BOOL shouldMakeChange = YES;
+
+      if([self.delegate respondsToSelector:
+         @selector(camera:willChangeEyePosition:lookAtPosition:)])
+      {
+         shouldMakeChange = 
+            [self.delegate camera:self 
+               willChangeEyePosition:&amp;aPosition
+               lookAtPosition:&amp;lookAtPosition];
+      }
+
+      if(shouldMakeChange)
+      {
+         const GLKVector3 upUnitVector = 
+            GLKVector3Make(0.0f, 1.0f, 0.0f); // Assume Y up
+
+         AGLKFrustumSetPositionAndDirection(
+             &amp;frustum, 
+             aPosition, 
+             lookAtPosition, 
+             upUnitVector);
+      }
+
+      self.isInCallback = NO;
+   }
+}
+
+
+- (void)setOrientation:(GLKMatrix4)aMatrix;
+{
+   AGLKFrustumSetToMatchModelview(&amp;frustum,
+      aMatrix); 
+}
+
+/////////////////////////////////////////////////////////////////
+// Move the receiver&#x2019;s eye position in orbit around receiver&#x2019;s 
+// look-at position. This method changes the receiver&#x2019;s frustum
+// viewing direction. This method indirectly calls 
+// -setPosition:lookAtPosition: giving the receiver&#x2019;s optional 
+// delegate an opportunity to revise or constrain the resulting
+// frustum positions. Positive angles produce counterclockwise
+// orbit about the receiver&#x2019;s &#x201C;up&#x201D; axis.
+- (void)rotateAngleRadiansAboutY:(GLfloat)anAngleRadians;
+{
+   GLKMatrix4 modelview = AGLKFrustumMakeModelview(&amp;frustum);
+   GLKMatrix4 newmatrx = GLKMatrix4Rotate(
+      modelview, anAngleRadians, 0.0f, 1.0f, 0.0f);
+
+   AGLKFrustumSetToMatchModelview(&amp;frustum, newmatrx);
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Move the receiver&#x2019;s eye position in orbit around receiver&#x2019;s 
+// look-at position. This method changes the receiver&#x2019;s frustum
+// viewing direction. This method indirectly calls 
+// -setPosition:lookAtPosition: giving the receiver&#x2019;s optional 
+// delegate an opportunity to revise or constrain the resulting
+// frustum positions. Positive angles produce counterclockwise
+// orbit about the receiver&#x2019;s &#x201C;up&#x201D; axis.
+- (void)rotateAngleRadiansAboutX:(GLfloat)anAngleRadians;
+{
+   GLKMatrix4 modelview = AGLKFrustumMakeModelview(&amp;frustum);
+   GLKMatrix4 newmatrx = GLKMatrix4Rotate(
+      modelview, anAngleRadians, 1.0f, 0.0f, 0.0f);
+
+   AGLKFrustumSetToMatchModelview(&amp;frustum, newmatrx);
+}
+
+
+/////////////////////////////////////////////////////////////////
+// Move the receiver&#x2019;s eye position and look-at position by the 
+// direction and distance of aVector. This method calls 
+// -setPosition:lookAtPosition: giving the receiver&#x2019;s optional 
+// delegate an opportunity to revise or constrain the resulting
+// frustum positions.
+- (void)moveBy:(GLKVector3)aVector;
+{
+   const GLKVector3 currentEyePosition = [self position];
+   const GLKVector3 currentLookAtPosition = [self lookAtPosition];
+
+   [self setPosition:GLKVector3Add(currentEyePosition, aVector) 
+      lookAtPosition:GLKVector3Add(currentLookAtPosition, aVector)];
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -1231,7 +1506,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"10.3、OpenGL ES摄像机","level":"1.11.3","depth":2,"next":{"title":"10.4、拾取 ","level":"1.11.4","depth":2,"path":"chapter10/section10.4.md","ref":"chapter10/section10.4.md","articles":[]},"previous":{"title":"10.2、添加模型","level":"1.11.2","depth":2,"path":"chapter10/section10.2.md","ref":"chapter10/section10.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter10/section10.3.md","mtime":"2019-07-14T09:14:10.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-15T13:12:13.663Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"10.3、OpenGL ES摄像机","level":"1.11.3","depth":2,"next":{"title":"10.4、拾取 ","level":"1.11.4","depth":2,"path":"chapter10/section10.4.md","ref":"chapter10/section10.4.md","articles":[]},"previous":{"title":"10.2、添加模型","level":"1.11.2","depth":2,"path":"chapter10/section10.2.md","ref":"chapter10/section10.2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter10/section10.3.md","mtime":"2019-07-27T04:35:48.199Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-27T00:17:00.277Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1239,6 +1514,10 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
